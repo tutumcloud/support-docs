@@ -33,9 +33,9 @@ All containers for service `my-webapp-prod` will be deployed to nodes `my-node-p
 
 When you launch a node cluster, three tags are assigned automatically to the node cluster and all nodes within that cluster:
 
-* Provider name (i.e. `digitalocean` or `aws`)
-* Region name (i.e. `us-east-1` or `lon1`)
-* Node cluster name (i.e. `my-node-cluster-dev-1`)
+* Provider name (e.g. `digitalocean`, `aws`)
+* Region name (e.g. `us-east-1`, `lon1`)
+* Node cluster name (e.g. `my-node-cluster-dev-1`)
 
 
 # Using deployment tags in the web UI
