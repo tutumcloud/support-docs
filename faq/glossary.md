@@ -1,0 +1,22 @@
+# Tutum Glossary
+  - API Roles
+  - Autodestroy
+  - Cloud provider
+  - Container
+  - Crash Recovery
+  - Deploy tags
+  - Entrypoint
+  - Environment variables
+  - Exposed ports
+  - Image
+  - Image tag
+  - Node
+  - Node Cluster
+  - OAuth Services
+  - Privileged mode
+  - Published ports
+  - Run command
+  - Service
+  - Sequential deployment
+  - Service Links
+  
