@@ -1,4 +1,4 @@
-**Autodestroy** is a Tutum feature that when enabled on an service, will automatically terminate containers when they stop (destroying all data within the container). This is useful for one-off actions which store results in a external system. It can be set with the following values:
+**Autodestroy** is a Tutum feature that when enabled on a service, will automatically terminate containers when they stop (destroying all data within the container). This is useful for one-off actions which store results in a external system. It can be set with the following values:
 
 -   **OFF**: if the container stops, regardless of the exit code, Tutum
     will not terminate it and will it in **Stopped** state.
@@ -14,7 +14,7 @@ to perform those actions before **Autodestroy**.
 ## Launching a Service with Autodestroy
 ###**Using the API[](https://docs.tutum.co/features/autodestroy/#launching-an-application-with-autodestroy-activated-through-the-api "Permalink to this headline")** 
 
-You can enable autodestroy when launching an service through the
+You can enable autodestroy when launching a service through the
 API:
 
 ``` 
@@ -30,7 +30,7 @@ more information.
 
 ###**Using the CLI[](https://docs.tutum.co/features/autodestroy/#launching-an-application-with-autodestroy-activated-through-the-cli "Permalink to this headline")** 
 
-You can enable autodestroy when launching an service using the CLI:
+You can enable autodestroy when launching a service using the CLI:
 
 ```
 $ tutum apps run --autodestroy ALWAYS [...] 
@@ -74,9 +74,9 @@ deployed using the CLI:
 $ tutum apps set --autodestroy ALWAYS (name or uuid) 
 ```
 
-### **Using the web interface[](https://docs.tutum.co/features/autodestroy/#using-the-web-interface "Permalink to this headline")**
+### **Using the web interface[](https://docs.tutum.co/features/autodestroy/#using-the-web-interface "Permalink to this headline")**	
 
-You can also activate or deactivate **Autodestroy** to an service
+You can also activate or deactivate **Autodestroy** to a service
 after it has been deployed from within the service detail page.
 
 ![](http://s.tutum.co.s3.amazonaws.com/support/images/service-autodestroy-enable-disable.gif)
