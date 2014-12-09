@@ -1,100 +1,85 @@
-**Crash recovery** is a Tutum feature that will autorestart and/or autoreplace your containers whenever they crash.
+**Autorestart** is a service-level setting that will automatically start your containers whenever they stop or crash. It has the following options:
 
-There are two settings related to crash recovery:
+- `OFF`: if the container stops, regardless of the exit code, it won't be autorestarted and will stay in **Stopped** state.
+- `ON_FAILURE`: if the container stops with an exit code different from 0, it will be autorestarted.
+- `ALWAYS`: if the container stops, regardless of the exit code, it will be autorestarted.
 
--   **Autorestart**: Tutum will try to autorestart the crashed container
-    up to three times in a 1 minute period.
--   **Autoreplace**: Tutum will try to replace the crashed container
-    with a new one up to three times in a 5 minute period.
+Please note that **Autorestart** is incompatible with **Autodestroy** in the following scenarios:
 
-Each of these settings have the following options:
+- If **Autorestart** is set to `ALWAYS`, **Autodestroy** has to be `OFF`
+- If **Autorestart** is set to `ON_FAILURE`, **Autodestroy** can be `OFF` or `ALWAYS`.
 
--   **OFF**: if the container stops, regardless of the exit code, Tutum
-    will not try to autorestart/autoreplace it.
--   **ON_FAILURE**: if the container stops with an exit code different
-    from 0, Tutum will try to perform autorestart/autoreplace on it.
--   **ALWAYS**: if the container stops, regardless of the exit code,
-    Tutum will try to perform autorestart/autoreplace on it.
+The **Autorestart** feature is implemented using Docker's `--autorestart` flag, so Docker will try to restart the container indefinitely until it succeeds.
 
-If both **Autorestart** and **Autoreplace** are activated, Tutum will
-try to perform **Autorestart** before **Autoreplace**.
+If the Docker daemon in the node is restarted (because it has been upgraded, or because the underlying node has been restarted), only containers launched within a service with **Autorestart** set to `ALWAYS` will be started automatically.
 
-If they fail to start the container after the number of tries during the
-periods described above, they will leave the container
-in **Stopped** state.
 
-## **Launching a Service with Crash Recovery** 
+## Launching a Service with Autorestart 
 
-###**Using the API**
+### Using the API
 
-You can specify the auto restart and autoreplace options when launching
+You can specify the autorestart option when launching
 a service through the API:
 
 ```
 POST /api/v1/service/ HTTP/1.1 
 { 
-	"auto restart": "ON_FAILURE", 
-	"autoreplace": "ALWAYS", 
+	"autorestart": "ON_FAILURE",
 	[...] 
 } 
 ```
 
-If not provided, both are set to a default value of **OFF**. 
+If not provided, it will have a default value of `OFF`. Check our [API documentation](https://docs.tutum.co/v2/api/?http) for more information.
 
-###**Using the CLI** 
+### Using the CLI
 
-You can specify the autorestart and autoreplace options when launching a
-service using the CLI:
+You can specify the autorestart option when launching a service using the CLI:
 
 ```
-$ tutum service run --autorestart ON_FAILURE --autoreplace ALWAYS [...] 
+$ tutum service run --autorestart ON_FAILURE [...] 
 ```
 
-If not provided, both are set to a default value of **OFF**. 
+If not provided, it will have a default value of `OFF`. Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more information.
 
-### **Using the web interface** 
+### Using the web interface
 
-At the moment, activating the **Crash recovery** setting on
-the **Service configuration** step of the **Launch new service **wizard
-sets both *autorestart* and *auto replace* settings to **ALWAYS**.
+At the moment, activating the **Autorestart** setting on the **Service configuration** step of the **Launch new service ** wizard sets the **autorestart** settings to `ALWAYS`.
 
-![](http://s.tutum.co.s3.amazonaws.com/support/images/service-wizard-crash-recovery.png)
+![](https://s.tutum.co/support/images/service-wizard-crash-recovery.png)
 
-The default value is to be *deactivated* which will set both options
-to **OFF**.
+The default value is to be *deactivated* which will set the option to `OFF`.
 
-## **Activating Crash Recovery to an already deployed service** 
 
-### **Using the API** 
+## Activating Crash Recovery to an already deployed service 
+
+### Using the API
  
-You can set the autorestart and autoreplace options after the service
-has been deployed through the API:
+You can set the autorestart option after the service has been deployed through the API:
 
 ```
 PATCH /api/v1/service/(uuid)/ HTTP/1.1 
 { 
-	"auto restart": "ON_FAILURE", 
-	"autoreplace": "ALWAYS" 
+	"autorestart": "ALWAYS",
 } 
 ```
 
-### **Using the CLI**
+Check our [API documentation](https://docs.tutum.co/v2/api/?http) for more information.
 
-You can set the autorestart and autoreplace options after the
-application has been deployed using the CLI:
+### Using the CLI
+
+You can set the autorestart option after the application has been deployed using the CLI:
 
 ``` 
-$ tutum service set --autorestart ON_FAILURE --autoreplace ALWAYS (name or uuid) 
+$ tutum service set --autorestart ALWAYS (name or uuid) 
 ```
 
-### **Using the web interface**
+Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more information.
 
-You can also activate or deactivate **Crash Recovery** to a service
-after it has been deployed from within the service detail page.
+### Using the web interface
 
-![](http://s.tutum.co.s3.amazonaws.com/support/images/service-crash-recovery-enable-disable.gif)
+You can also activate or deactivate **Autorestart** to a service after it has been deployed from within the service detail page.
 
-You can click on the **Crash Recovery** button to turn the
-feature **ON** or **OFF**. The behavior of this settings is the same as
-activating it on the **Service configuration** step of the **Launch new
-service** wizard.
+![](https://s.tutum.co/support/images/service-crash-recovery-enable-disable.gif)
+
+You can click on the **Autorestart** button to turn the
+feature `ALWAYS` (ON) or `OFF`.

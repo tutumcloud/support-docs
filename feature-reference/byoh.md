@@ -36,6 +36,10 @@ Execute this command in your host and it will appear in the list of nodes automa
 
 # Known limitations
 
+## Firewall requisites
+
+At the moment, in order for us to connect to the Docker daemon in the node, we need port **2375** open in any firewalls your host might have enabled. We are working to remove this limitation and to make it work behind firewalls with incoming port restrictions and NAT routers.
+
 ## Supported Linux distros
 
 At the moment, **Tutum Agent** has only been tested in Ubuntu 14.04. We are working to make it available to more platforms soon.
