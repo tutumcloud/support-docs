@@ -21,7 +21,7 @@ Select the tag that you would like to redeploy, and click **Redeploy**. Tutum wi
 
 ## Redeploying a service using webhooks
 
-You can also use webhook receivers to trigger a service redeploy. This could be useful to redeploy everytime an image is pushed or built in the Docker Hub. [Click here for more information](https://tutum.freshdesk.com/support/solutions/articles/5000513815)
+You can also use webhook receivers to trigger a service redeploy. This could be useful to redeploy everytime an image is pushed or built in the Docker Hub. [Click here for more information](https://support.tutum.co/support/solutions/articles/5000513815)
 
 # Using webhook handlers in the API and CLI
 
