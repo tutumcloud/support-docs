@@ -58,7 +58,7 @@ This is a known issue that will be fixed. From thereon new BYO-nodes will have a
 
 If you terminate a BYO-node from within Tutum, and then execute the tutum-agent install script again, you'll see that the node does not reappear in the interface. 
 
-In order to add a node that was previously terminated, you have to SSH into the node and remove the `tutum-agent.conf` file. To do so, execute the following command prior to runnign the installation script again.
+In order to add a node that was previously terminated, you have to SSH into the node and remove the `tutum-agent.conf` file. To do so, execute the following command prior to running the installation script again.
 
 `$ rm /etc/tutum/agent/tutum-agent.conf`
 
