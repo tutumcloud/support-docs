@@ -43,3 +43,27 @@ At the moment, in order for us to connect to the Docker daemon in the node, we n
 ## Supported Linux distros
 
 At the moment, **Tutum Agent** has only been tested in Ubuntu 14.04. We are working to make it available to more platforms soon.
+
+## Running Docker with BYON
+
+To continue using the docker client from within the node, you'll need to add `/usr/lib/tutum/` to your path. You can do this everytime by executing: 
+
+`$ export PATH=$PATH:/usr/lib/tutum/`
+
+or add it to your path in `~/.profile` or `~/.bash_profile` or `~/.bashrc` as necessary.
+
+This is a known issue that will be fixed. From thereon new BYO-nodes will have access to `docker`.
+
+## Terminating and re-adding a node
+
+If you terminate a BYO-node from within Tutum, and then execute the tutum-agent install script again, you'll see that the node does not reappear in the interface. 
+
+In order to add a node that was previously terminated, you have to SSH into the node and remove the `tutum-agent.conf` file. To do so, execute the following command prior to runnign the installation script again.
+
+`$ rm /etc/tutum/agent/tutum-agent.conf`
+
+This is a known issue that will be fixed. From thereon manual deletion of `tutum-agent.conf` will not be required.
+
+
+
+
