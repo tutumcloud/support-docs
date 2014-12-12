@@ -16,7 +16,7 @@ You can provision nodes directly from within Tutum (using the Web UI, CLI or API
 
 To link your Cloud Provider accounts, click on your username on the topi right corner of the application > **Account info** > **Cloud providers**. Or click [here](https://dashboard.tutum.co/account/).
 
-There are  detailed tutorials on how to link your account for each of the supported providers:
+There are detailed tutorials on how to link your account for each of the supported providers:
 
   - [Amazon Web Services](https://support.tutum.co/support/solutions/articles/5000224910-link-your-amazon-web-services-account-to-tutum)
   - [Digital Ocean](https://support.tutum.co/support/solutions/articles/5000012151-link-your-digital-ocean-account-to-tutum)
@@ -24,12 +24,27 @@ There are  detailed tutorials on how to link your account for each of the suppor
   
 When launching a node from a cloud provider you'll actually be creating node clusters. Node Clusters are logical groups of nodes of the same type and from the same cloud provider. Node clusters allow you to scale the infrastructure by provisioning more nodes with a drag of a slider.
   
+After you have linked your cloud provider account, go to the **Nodes** tab and click on **Launch new node cluster**. You'll be taken to the wizard to launch your node cluster. 
+
+![](http://s.tutum.co.s3.amazonaws.com/support/images/first_node.png)
+
+There are up to 7 fields you can configure here:
+
+  - Node cluster name: the name you wish to give your node cluster.
+  - Deploy tags: more info [here](https://support.tutum.co/support/solutions/articles/5000508859-deploy-tags)
+  - Provider: the provider to use if you have configured more than one.
+  - Region: the region on which to provision the node cluster. This is dependent on the provider you chose.
+  - Type/size: the type and size of the nodes in the cluster. This is dependent on the provider you chose.
+  - Number of nodes: the number of nodes that this node cluster will be created with. This can be modified at a later time.
+  - Disk size: the disk size for each node. This is only available for Amazon Web Services and Microsoft Azure. Digital Ocean nodes have a fixed disk size dependent on the type/size of node chosen. 
   
+Click on **Launch node cluster** to provision this node cluster. 
+   
 ### Using "Bring your own node"
 
 Alternatively, if you do not wish to use your existing account at one of the supported cloud providers, or if you do not have an account, you can turn any Linux host that is connected to the Internet into a full-fledge Tutum node. 
 
-Find all the information on how to turn a Linux node into a node by installing the Tutum agent [here](https://support.tutum.co/support/solutions/articles/5000513678-bring-your-own-node).
+Find all the information on how to turn a Linux host into a node by installing the Tutum agent [here](https://support.tutum.co/support/solutions/articles/5000513678-bring-your-own-node).
 
 ### What's next?
 
