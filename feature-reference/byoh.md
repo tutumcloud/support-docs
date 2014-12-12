@@ -25,11 +25,12 @@ You can generate the command needed to install and configure the **Tutum Agent**
 	
 You will get the command that you have to use to bring your own node, including the token:
 
-	Tutum lets you use your own servers as nodes to run containers. For this you have to install our agent.
-	Run the following command on your server:
+```
+Tutum lets you use your own servers as nodes to run containers. For this you have to install our agent.
+Run the following command on your server:
 
-		curl -Ls https://files.tutum.co/scripts/install-agent.sh | sudo sh -s 63ad1c63ec5d431a9b31133e37e8a614
-
+	curl -Ls https://files.tutum.co/scripts/install-agent.sh | sudo sh -s 63ad1c63ec5d431a9b31133e37e8a614
+```
 
 Execute this command in your host and it will appear in the list of nodes automatically.
 
@@ -48,7 +49,7 @@ At the moment, **Tutum Agent** has only been tested in Ubuntu 14.04. We are work
 
 To continue using the docker client from within the node, you'll need to add `/usr/lib/tutum/` to your path. You can do this everytime by executing: 
 
-`$ export PATH=$PATH:/usr/lib/tutum/`
+	$ export PATH=$PATH:/usr/lib/tutum/
 
 or add it to your path in `~/.profile` or `~/.bash_profile` or `~/.bashrc` as necessary.
 
@@ -56,13 +57,13 @@ This is a known issue that will be fixed. From thereon new BYO-nodes will have a
 
 ## Terminating and re-adding a node
 
-If you terminate a BYO-node from within Tutum, and then execute the tutum-agent install script again, you'll see that the node does not reappear in the interface. 
+If you remove a BYO-node from within Tutum, and then execute the Tutum Agent install script again, you'll see that the node does not reappear in the interface.
 
 In order to add a node that was previously terminated, you have to SSH into the node and remove the `tutum-agent.conf` file. To do so, execute the following command prior to running the installation script again.
 
-`$ rm /etc/tutum/agent/tutum-agent.conf`
+	$ rm /etc/tutum/agent/tutum-agent.conf
 
-This is a known issue that will be fixed. From thereon manual deletion of `tutum-agent.conf` will not be required.
+This is a known issue that will be fixed soon. From thereon manual deletion of `tutum-agent.conf` will not be required.
 
 
 
