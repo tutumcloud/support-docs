@@ -74,3 +74,9 @@ TUTUM_CONTAINER_HOSTNAME | `my-proxy-1.51e562cb-admin.node.tutum.io`
 
 If you provide API access to your service, you can use the generated token to access these APIs to gather information or automate operations, such as scaling.
 
+
+## Known limitations
+
+Because of the static nature of environment variables and Docker links, if the "server" service is redeployed or scaled, the "client" service will need to be redeployed as well to get an updated set of environment variables and DNS hostnames.
+
+This limitation will be removed in the future with the implementation of enhanced service discovery mechanisms.
