@@ -1,6 +1,6 @@
 # Introduction
 
-As well as deploying and managing hosts on the supported cloud providers, Tutum can use any Linux host as a node to deploy containers to. For this, we need you to install our **Tutum Agent**, which will allow us to remotely manage your host.
+As well as deploying and managing hosts on the supported cloud providers, Tutum can use any Linux host as a node to deploy containers to. For this, we need you to install our **Tutum Agent**, which will allow Tutum to remotely manage your host.
 
 ## Bringing your own node
 
@@ -39,7 +39,7 @@ Execute this command in your host and it will appear in the list of nodes automa
 
 ## Firewall requisites
 
-At the moment, in order for us to connect to the Docker daemon in the node, we need ports **2375/tcp** (docker server) and **48001/tcp** (metrics) open in any firewalls your host might have enabled. We are working to remove this limitation and to make it work behind firewalls with incoming port restrictions and NAT routers.
+At the moment, in order for Tutum to connect to the Docker daemon in the node, we need ports **2375/tcp** (docker server) and **48001/tcp** (metrics) open in any firewalls your host might have enabled. We are working to remove this limitation and to make it work behind firewalls with incoming port restrictions and NAT routers.
 
 Of course, you will need to open any ports that you are planning to publish in your services. If you are using dynamic ports, Docker will assign them in the range **49153** to **65535** sequentially.
 
