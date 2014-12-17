@@ -16,6 +16,4 @@ You'll be redirected to a Digital Ocean login screen. Login to your **Digital Oc
 
 ![](http://cdn.freshdesk.com/data/helpdesk/attachments/production/5000867873/original/Screenshot_2014-09-17_14.15.47.png?1411052516)
 
-Once successful you'll get a confirmation that your account has been linked! Now you're ready to start deploying **Node Clusters**.
-
-
+Once successful you'll get a confirmation that your account has been linked! You are now all set to start using DigitalOcean as the infrastructure provider for Tutum. Click [here to learn how to deploy your first node](https://tutum.freshdesk.com/support/solutions/articles/5000523221-your-first-node).
