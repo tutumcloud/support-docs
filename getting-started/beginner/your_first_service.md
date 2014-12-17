@@ -28,7 +28,7 @@ You will see an image called `tutum/hello-world`. This image is for a container 
 
 Click on **Select** to be taken to **Step 2: Service configuration**.
 
-In this step Tutum loads all of the available Image tags available for this image. **tutum/hello-world** only has 1 image tag called **latest**.
+In this step Tutum loads all of the Image tags available for this image. **tutum/hello-world** only has 1 image tag called **latest**.
 
 ###Publishing a port
 
