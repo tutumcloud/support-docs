@@ -27,7 +27,7 @@ web-1                        ae20d960  ▶ Running     tutum.co/borjaburgos/quic
 Now curl the new endpointto see the updated *Hello Python Users!* greeting. *Note: if you don't see an endpoint, wait until the container status changes to **running**.*
 
 ```
-$ curl web-1.python-user.cont.tutum.io:49162
+$ curl web-1.$TUTUM_USER.cont.tutum.io:49162
 Hello Python Users!</br>Hostname: e360d05cdb81</br>Counter: Redis Cache not found, counter disabled.%
 ```
 

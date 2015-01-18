@@ -35,9 +35,11 @@ The **PORTS** column contains the URL we'll use to see our service running in ou
 Alternatively, you can use *curl*:
 
 ```
-curl web-1.python-user.cont.tutum.io:49165                                                                                                                      
+curl web-1.$TUTUM_USER.cont.tutum.io:49165                                                                                                                      
 Hello World!</br>Hostname: web-1</br>Counter: Redis Cache not found, counter disabled.%
 ``` 
+
+**CONGRATULATIONS!** You've deployed your first service using Tutum.
 
 Next: [Define environment variables](https://tutum.freshdesk.com/support/solutions/articles/5000539703).
 
