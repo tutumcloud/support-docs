@@ -2,7 +2,7 @@
 
 In this step you will install the Tutum CLI. This provides you access to the Tutum Command Line Interface tool.
 
-**Linux**
+**Linux & Windows**
 
 Open your Terminal application and execute the following command:
 
