@@ -35,7 +35,7 @@ The **PORTS** column contains the URL we'll use to see our service running in ou
 Alternatively, you can use *curl*:
 
 ```
-curl web-1.$TUTUM_USER.cont.tutum.io:49165                                                                                                                      
+$ curl web-1.$TUTUM_USER.cont.tutum.io:49165                                                                                                                      
 Hello World!</br>Hostname: web-1</br>Counter: Redis Cache not found, counter disabled.%
 ``` 
 
