@@ -11,7 +11,7 @@ $ cd quickstart-python
 Next, we have to build this application. Execute the following command to build the app. This will create a Docker image and tag it as "quickstart-python": 
 
 ```
-$ tutum build ./step-01/ --tag quickstart-python
+$ tutum build --tag quickstart-python .
 ```
 
 Next: [Push the Docker image to Tutum's Registry](https://tutum.freshdesk.com/support/solutions/articles/5000539697).
