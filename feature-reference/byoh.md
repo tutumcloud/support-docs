@@ -34,6 +34,13 @@ Run the following command on your server:
 
 Execute this command in your host and it will appear in the list of nodes automatically.
 
+## Uninstalling tutum-agent
+
+To uninstall `tutum-agent` from your host, execute the following command:
+
+```
+$ apt-get remove tutum-agent
+```
 
 # Known limitations
 
