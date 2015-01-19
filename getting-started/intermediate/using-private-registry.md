@@ -11,6 +11,13 @@ image to Tutum’s registry. Please follow the [official installation
 instructions](http://docs.docker.com/installation/) depending on your
 system.
 
+In a terminal set the environment variable **TUTUM_USER** as *your username* in Tutum. This will allow you to copy and paste the commands below:
+
+```
+$ export TUTUM_USER="username"
+```
+
+
 With Docker installed:
 
 ``` 
@@ -19,8 +26,8 @@ Username: user
 Password: 
 Email: user@email.com 
 Login Succeeded 
-$ docker tag my_image tutum.co/user/my_image 
-$ docker push tutum.co/user/my_image 
+$ docker tag my_image tutum.co/$TUTUM_USER/my_image 
+$ docker push tutum.co/$TUTUM_USER/my_image 
 ```
 
 Note: In the instructions above, please substitute `user` with your Tutum username, `my_image` with your image’s name, and`user@email.com` with the email you used to register at Tutum.
@@ -28,13 +35,13 @@ Note: In the instructions above, please substitute `user` with your Tutum user
 If you created your account logging in via Docker.com or GitHub, you
 will need to [set a password](https://dashboard.tutum.co/account/) before being able to push to the registry.
 
-After you complete those steps, you’ll see that your application image is available for selection under the **Tutum Registry** tab inside the **Private** tab in the **Launch new service** wizard. See [Deploying a private image from Tutum’s private
-registry](http://support.tutum.co/support/solutions/articles/5000012154-deploy-your-first) for more details.
+After you complete those steps, you’ll see that your container image is available for selection under the **Tutum Registry** tab inside the **Private** tab in the **New service** wizard. 
+
+![](http://s.tutum.co.s3.amazonaws.com/support/images/private_images.gif)
 
 **Using the tutum CLI**[](https://docs.tutum.co/features/registry/#using-the-tutum-cli "Permalink to this headline") 
 
-You can also push a local image to Tutum’s private registry using the
-CLI. Following the above example:
+You can also push a local image to Tutum’s private registry using the CLI. Following the above example:
 
 ```
 $ tutum login 
@@ -52,5 +59,5 @@ Pushing tag for rev [0c292a6f613e] on {https://tutum.co/v1/repositories/user/my_
 ```
 
 Shortly after the push finishes, the image will appear under the **Tutum
-Registry** tab inside the **Private** tab in the **Launch new
+Registry** tab inside the **Private** tab in the **New
 service** wizard.
