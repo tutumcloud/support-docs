@@ -40,6 +40,6 @@ Hello World</br>Hostname: web-1</br>Counter: Redis Cache not found, counter disa
 $ curl lb-1.$TUTUM_USER.cont.tutum.io                                                                                                                                                
 Hello World</br>Hostname: web-2</br>Counter: Redis Cache not found, counter disabled.%
 ```
-Find out more about *tutum/haproxy* [here]().
+Find out more about *tutum/haproxy* [here](https://github.com/tutumcloud/tutum-docker-clusterproxy/).
 
 Next: [Provision a data backend for your service](https://tutum.freshdesk.com/support/solutions/articles/5000539710)
