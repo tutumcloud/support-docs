@@ -55,4 +55,4 @@ Hello Python Users!</br>Hostname: web-2</br>Counter: Redis Cache not found, coun
 
 Congratulations! You now have two containers running in your **web** service.
 
-Next: [View logs](https://tutum.freshdesk.com/support/solutions/articles/80539708)
+Next: [View logs](https://tutum.freshdesk.com/support/solutions/articles/5000539708-8-view-logs)
