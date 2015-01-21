@@ -98,4 +98,4 @@ Tutum.
 ![](http://cdn.freshdesk.com/data/helpdesk/attachments/production/5001958672/original/Screen_Shot_2014-10-20_at_19.40.50.png?1413848821)
 
 You are now all set to start using AWS as the infrastructure provider
-for Tutum.
+for Tutum. Click [here to learn how to deploy your first node](https://tutum.freshdesk.com/support/solutions/articles/5000523221-your-first-node). 
