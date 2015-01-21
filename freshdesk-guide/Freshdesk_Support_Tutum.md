@@ -21,9 +21,11 @@ This comes from the Apple customer service training manual.
 
 ## Basics of Using Freshdesk
 
-Head over to this URL and Login: [https://tutum.freshdesk.com/helpdesk](https://tutum.freshdesk.com/helpdesk)
+Head over to this URL and Login: [https://tutum.freshdesk.com/helpdesk](http://s.tutum.co.s3.amazonaws.com/support/images/Ticket_dashboard.png)
 
-You will be at the Dashboard, which will look like this: ![FreshdeskDashboard](https://www.dropbox.com/s/tkvgh2ubzvvql08/Screenshot%202015-01-21%2011.39.27.png?dl=0)
+You will be at the Dashboard, which will look like this:
+
+![FreshdeskDashboard](http://s.tutum.co.s3.amazonaws.com/support/images/Ticket_dashboard.png)
 
 From the **Ticket summary**, you will want to click on **Open** tickets, or you can click on **Tickets** in the top menu.
 
@@ -33,7 +35,7 @@ Here you'll find all of the tickets available. You can filter the tickets by usi
 
 Clicking the top dropdown will also give you options for choosing common filters.
 
-![TicketDashboardMenu](https://www.dropbox.com/s/2nllnk19qxhiia7/Screenshot%202015-01-21%2011.44.23.png?dl=0)
+![TicketDashboardMenu](http://s.tutum.co.s3.amazonaws.com/support/images/ticket_menu_open.png)
 
 On the right hand side, you will be able to see if the ticket is **New** or if it has already been responded to. You can also find the **Agent** assigned, **Status** and **Priority**.
 
@@ -63,11 +65,11 @@ Depending on how you're able to resolve the ticket there will be a **Status** th
 
 If there is any relevant information to help another agent click on **Add a Note** next to Reply/Forward. You can also notify another agent of your note at the top, with **Notify Agents:**
 
-![AddANote](https://www.dropbox.com/s/dxj3ypw17pzsk3w/Screenshot%202015-01-21%2012.07.25.png?dl=0)
+![AddANote](http://s.tutum.co.s3.amazonaws.com/support/images/Add_a_note.png)
 
 Then under **Ticket Properties** change the **Status** to **Pending** and assign the relevant **Agent** with the dropdown menu. If the issue is a higher priority, you can also set the **Priority**.
 
-![TicketProperties](https://www.dropbox.com/s/gxe7ri5n4upr022/Screenshot%202015-01-21%2012.11.12.png?dl=0)
+![TicketProperties](http://s.tutum.co.s3.amazonaws.com/support/images/Ticket_Properties.png)
 
 ## Forums
 
@@ -79,5 +81,5 @@ We also have forums that include:
 
 You can **Reply** from here, as well as **Mark topic as...** Planned, In Progress, Deferred, Implemented, and Not Taken. You're also able to **Convert Topic to Ticket**.
 
-![Forums](https://www.dropbox.com/s/ztx0cohto62bpky/Screenshot%202015-01-21%2012.31.13.png?dl=0)
+![Forums](http://s.tutum.co.s3.amazonaws.com/support/images/Forums.png)
 
