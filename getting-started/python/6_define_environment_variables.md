@@ -7,10 +7,10 @@ At runtime, environment variables are exposed to the application inside the cont
 Open the file in quickstart-python/app.py, and take a look at the return statement in the method *hello()*:
 
 ```
-return "Hello" + os.environ.get('NAME') + '!</br>' + "Hostname: " + socket.gethostname() + '</br>' + "Counter: " + str(counter)
+return html.format(name=os.getenv('NAME', "world"), hostname=socket.gethostname(), visits=visits)
 ```
 
-You'll see that the code uses **os.environ.get('NAME')** to get the environment variable **NAME**. If you modify the enviroment variable, the message should change accordingly. Try that by executing:
+You'll see that the code uses **os.getenv('NAME', "world")** to get the environment variable **NAME**. If you modify the enviroment variable, the message should change accordingly. Try that by executing:
 
 ```
 $ tutum service set --env NAME="Python Users" --redeploy web

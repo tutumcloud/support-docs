@@ -6,7 +6,7 @@ In this step you will deploy the app as a Tutum Service. Remember that a service
 $ tutum service run -p 80 --name web tutum.co/$TUTUM_USER/quickstart-python
 ```
 
-If you don't have Docker installed locally and you have been following this tutorial, it's likely that you don't have the `quickstart-python` image in your private registry at Tutum. For tihs reason the command above won't work. To deploy the service in this case, you can use the public image `tutum/quickstart-python` available from the Docker Hub. To do this execute the following command:
+If you don't have Docker installed locally and you have been following this tutorial, it's likely that you don't have the `quickstart-python` image in your private registry at Tutum. For this reason the command above won't work. To deploy the service in this case, you can use the public image `tutum/quickstart-python` available from the Docker Hub. To do this execute the following command:
 
 ``` 
 $ tutum service run -p 80 --name web tutum/quickstart-python
@@ -35,7 +35,7 @@ The **PORTS** column contains the URL we'll use to see our service running in ou
 Alternatively, you can use *curl*:
 
 ```
-$ curl web-1.$TUTUM_USER.cont.tutum.io:49165                                                                                                                      
+$ curl web-1.$TUTUM_USER.cont.tutum.io:49162                                                                                                                      
 Hello World!</br>Hostname: web-1</br>Counter: Redis Cache not found, counter disabled.%
 ``` 
 
