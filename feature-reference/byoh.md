@@ -56,13 +56,7 @@ At the moment, **Tutum Agent** has only been tested in Ubuntu 14.04. We are work
 
 ## Running Docker with BYON
 
-To continue using the docker client from within the node, you'll need to add `/usr/lib/tutum/` to your path. You can do this everytime by executing: 
-
-	$ export PATH=$PATH:/usr/lib/tutum/
-
-or add it to your path in `~/.profile` or `~/.bash_profile` or `~/.bashrc` as necessary.
-
-This is a known issue that will be fixed. From thereon new BYO-nodes will have access to `docker`.
+Simply use `docker` as you would otherwise. For example, running `$ docker ps` will show you a list of containers running. **Please note** there will be containers running from images starting with `tutum/` which you may not recognize. These are `system containers` that Tutum runs to offer its service. All of these come from open source repositories available at [http://www.github.com/tutumcloud](http://github.com/tutumcloud).
 
 ## Terminating and re-adding a node
 
