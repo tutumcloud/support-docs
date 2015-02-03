@@ -14,7 +14,7 @@
 ## Changed
 
 - **Tutum CLI v0.11.5**
-  - filters: `tutum container ps --service quickstart-go`
+  - filters: `tutum container ps --service servicename`
   - volumes: `-v --volume`, `--volumes-from`, `tutum volume/volumegroup list/inspect`
   - service public dns: `servicename.username.svc.tutum.io`
 
