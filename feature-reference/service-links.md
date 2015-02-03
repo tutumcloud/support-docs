@@ -41,8 +41,9 @@ In the example above, the `my-proxy` containers will also have the following hos
 
 Hostname | Value
 - | -
-`my-web-app-1` | `172.16.0.5`
-`my-web-app-2` | `172.16.0.6`
+`web` | `172.16.0.5`
+`web-1` | `172.16.0.5`
+`web-2` | `172.16.0.6`
 
 Because we use ambassadors and native docker links, it's always safe to connect to those IPs using the port that you are targeting (in this example, port `80`).
 
