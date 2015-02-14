@@ -24,7 +24,7 @@ NAME                         UUID      STATUS        IMAGE                      
 web-1                        a2ff2247  ✘ Terminated  tutum.co/borjaburgos/quickstart-python:latest  python app.py               40 minutes ago  web-1.borjaburgos.cont.tutum.io:49165->80/tcp
 web-1                        ae20d960  ▶ Running     tutum.co/borjaburgos/quickstart-python:latest  python app.py               20 seconds ago  web-1.borjaburgos.cont.tutum.io:49166->80/tcp
 ```
-Now curl the new endpointto see the updated *Hello Python Users!* greeting. *Note: if you don't see an endpoint, wait until the container status changes to **running**.*
+Now curl the new endpoint to see the updated *Hello Python Users!* greeting. *Note: if you don't see an endpoint, wait until the container status changes to **running**.*
 
 ```
 $ curl web-1.$TUTUM_USER.cont.tutum.io:49162
