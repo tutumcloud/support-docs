@@ -1,6 +1,6 @@
 ## Introduction
 
-This tutorial will have you deploying a Python app to Tutum in minutes. 
+This tutorial will have you deploying a Python app to Tutum. 
 
 Hang on for a few more minutes to learn how it all works, so you can make the most out of Tutum.
 
