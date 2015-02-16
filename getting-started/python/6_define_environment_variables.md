@@ -44,4 +44,4 @@ If you are wondering where the default value for the **NAME** environment variab
 ENV NAME World
 ```
 
-Next: [Scale the service](https://tutum.freshdesk.com/support/solutions/articles/5000539706).
+Next: [Scale the service](https://support.tutum.co/support/solutions/articles/5000539706).

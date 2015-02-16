@@ -87,7 +87,7 @@ Configuring the Load Balancer 
 
 Ok, here's where things start getting interesting. First thing we need
 to do is assign this service an API Role. You can [read more about API
-Roles here](https://tutum.freshdesk.com/support/solutions/articles/5000012181).
+Roles here](https://support.tutum.co/support/solutions/articles/5000012181).
 Doing this will pass a *TUTUM_AUTH* environment variable to your
 service's containers that will allow them to query Tutum's API on your
 behalf. **tutum/haproxy** uses this to query the API on the status and

@@ -27,4 +27,4 @@ $ tutum container logs web-1
 
 Visit your application in the browser (or using curl) again, print the logs to screen again, and you’ll see another log message generated.
 
-Next: [Load balance the service](https://tutum.freshdesk.com/support/solutions/articles/5000559797).
+Next: [Load balance the service](https://support.tutum.co/support/solutions/articles/5000559797).

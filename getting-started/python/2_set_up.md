@@ -56,4 +56,4 @@ $ export TUTUM_USER=python-user
 ```
 Find the documentation for the Tutum CLI tool and API [here](https://docs.tutum.co/v2/api/?shell).
 
-Next: [Prepare the app](https://tutum.freshdesk.com/support/solutions/articles/5000539696).
+Next: [Prepare the app](https://support.tutum.co/support/solutions/articles/5000539696).

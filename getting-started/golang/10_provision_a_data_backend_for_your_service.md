@@ -40,4 +40,4 @@ Visit or `curl` the load balanced web endpoint again. You'll notice that the *we
     <h1>hello, Golang users</h1>
     <b>Hostname: </b>web-2<br><b>MongoDB Status: </b>Connected%
 
-Next: [Service Stacks](https://tutum.freshdesk.com/support/solutions/articles/5000539711)
+Next: [Service Stacks](https://support.tutum.co/support/solutions/articles/5000539711)

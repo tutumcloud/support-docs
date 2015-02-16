@@ -41,5 +41,5 @@ Hello World!</br>Hostname: web-1</br>Counter: Redis Cache not found, counter dis
 
 **CONGRATULATIONS!** You've deployed your first service using Tutum.
 
-Next: [Define environment variables](https://tutum.freshdesk.com/support/solutions/articles/5000539703).
+Next: [Define environment variables](https://support.tutum.co/support/solutions/articles/5000539703).
 

@@ -41,4 +41,4 @@ You should notice an URL endpoint in the *PORT* column for lb-1. In the example 
 
 Find out more about *tutum/haproxy* [here](https://github.com/tutumcloud/tutum-docker-clusterproxy/).
 
-Next: [Provision a data backend for your service](https://tutum.freshdesk.com/support/solutions/articles/5000539710)
+Next: [Provision a data backend for your service](https://support.tutum.co/support/solutions/articles/5000539710)

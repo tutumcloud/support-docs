@@ -38,4 +38,4 @@ NAME                                    DESCRIPTION
 tutum.co/python-user/quickstart-python
 ```
 
-Next: [Deploy the app as a Tutum service](https://tutum.freshdesk.com/support/solutions/articles/5000539698).
+Next: [Deploy the app as a Tutum service](https://support.tutum.co/support/solutions/articles/5000539698).

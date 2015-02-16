@@ -32,7 +32,7 @@ In this step Tutum loads all of the Image tags available for this image. **tutum
 
 ###Publishing a port
 
-Since we intend to access this container over the Internet, we first need to publish a port. By default, ports are not accessible publicly. To learn more about ports click [here](https://tutum.freshdesk.com/support/solutions/articles/5000512333-port).
+Since we intend to access this container over the Internet, we first need to publish a port. By default, ports are not accessible publicly. To learn more about ports click [here](https://support.tutum.co/support/solutions/articles/5000512333-port).
 
 Click on the **Ports** table, where it says *Click to override ports defined in image*. Then click on the **Published** checkbox. 
 
@@ -95,5 +95,5 @@ Clicking on the link *(square and arrow icon)* to the right of the endpoint will
 
 ### What's next?
 
-Learn how to scale your service [here](https://tutum.freshdesk.com/support/solutions/articles/5000012179-service-scaling).
+Learn how to scale your service [here](https://support.tutum.co/support/solutions/articles/5000012179-service-scaling).
 

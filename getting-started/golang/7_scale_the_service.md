@@ -48,4 +48,4 @@ From the example above (note that your URLs will be different) visiting (in the 
 
 Congratulations! You now have **two** containers running in your **web** service.
 
-Next: [View logs](https://tutum.freshdesk.com/support/solutions/articles/5000559796)
+Next: [View logs](https://support.tutum.co/support/solutions/articles/5000559796)

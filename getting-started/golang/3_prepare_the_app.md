@@ -14,4 +14,4 @@ Next, we have to build this application. Execute the following command to build 
 $ tutum build --tag quickstart-go .
 ```
 
-Next: [Push the Docker image to Tutum's Registry](https://tutum.freshdesk.com/support/solutions/articles/5000559792).
+Next: [Push the Docker image to Tutum's Registry](https://support.tutum.co/support/solutions/articles/5000559792).

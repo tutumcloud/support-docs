@@ -40,4 +40,4 @@ NAME                                    DESCRIPTION
 tutum.co/golang-user/quickstart-go
 ```
 
-Next: [Deploy the app as a Tutum service](https://tutum.freshdesk.com/support/solutions/articles/5000559793).
+Next: [Deploy the app as a Tutum service](https://support.tutum.co/support/solutions/articles/5000559793).

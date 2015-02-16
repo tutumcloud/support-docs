@@ -10,4 +10,4 @@ This tutorial assumes that you have:
 - at least one node running. [Read this](https://support.tutum.co/support/solutions/articles/5000523221-your-first-node) to launch your first node in Tutum.
 - (optional) Docker installed - see the installation guides for [OS X, Windows and Linux](https://docs.docker.com/installation/#installation).
 
-Next: [Set up](https://tutum.freshdesk.com/support/solutions/articles/5000559790).
+Next: [Set up](https://support.tutum.co/support/solutions/articles/5000559790).

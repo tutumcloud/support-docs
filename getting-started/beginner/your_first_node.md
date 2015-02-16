@@ -50,7 +50,7 @@ Find all the information on how to turn a Linux host into a node by installing t
 
 Now that you've got at least one node deployed, it's time to deploy your first service. Remember that a service is a group of containers from the same container image. Services make it simple to scale your application across a number of nodes. Services can also be linked one to another even if they are deployed on different nodes, regions, or even cloud providers. 
 
-Click [here](https://tutum.freshdesk.com/support/solutions/articles/5000525024-your-first-service) to continue reading the tutorial on how to deploy your first service.
+Click [here](https://support.tutum.co/support/solutions/articles/5000525024-your-first-service) to continue reading the tutorial on how to deploy your first service.
 
 
 

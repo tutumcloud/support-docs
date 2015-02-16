@@ -39,5 +39,5 @@ Alternatively, you can use *curl*:
 
 **CONGRATULATIONS!** You've deployed your first service using Tutum.
 
-Next: [Define environment variables](https://tutum.freshdesk.com/support/solutions/articles/5000559794).
+Next: [Define environment variables](https://support.tutum.co/support/solutions/articles/5000559794).
 

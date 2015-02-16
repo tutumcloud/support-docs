@@ -42,4 +42,4 @@ Hello World</br>Hostname: web-2</br>Counter: Redis Cache not found, counter disa
 ```
 Find out more about *tutum/haproxy* [here](https://github.com/tutumcloud/tutum-docker-clusterproxy/).
 
-Next: [Provision a data backend for your service](https://tutum.freshdesk.com/support/solutions/articles/5000539710)
+Next: [Provision a data backend for your service](https://support.tutum.co/support/solutions/articles/5000539710)
