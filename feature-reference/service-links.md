@@ -29,7 +29,7 @@ Hostname | Value
 `web-1` | `A 172.16.0.5`
 `web-2` | `A 172.16.0.6`
 
-The recommended way for the `my-proxy` service to connect to the `my-web-app` service contaiers is by using these hostnames, as they can be updated at runtime.
+The recommended way for the `my-proxy` service to connect to the `my-web-app` service containers is by using these hostnames, as they will be updated at runtime if the IPs change.
 
 There's no need for `SRV` records, as all ports exposed in the server containers are reachable on those IPs without mapping.
 
