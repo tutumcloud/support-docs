@@ -32,13 +32,22 @@ Fill in the **Add User - Profile** form, entering `tutum` in the username field,
 
 ![](https://s.tutum.co/support/images/softlayer-step-2.png)
 
-In the next step, **Permissions**, select all **Devices**, **Network** and **Services** permissions, and click **Add Portal Permissions**:
+In the next step, **Permissions**, select the following permissions:
 
-![](https://s.tutum.co/support/images/softlayer-step-3.png)
-![](https://s.tutum.co/support/images/softlayer-step-4.png)
-![](https://s.tutum.co/support/images/softlayer-step-5.png)
+* Support
+	* View Tickets
+	* Add Tickets
+	* Edit Tickets
+* Devices
+	* View Virtual Server Details
+* Services
+	* Manage SSH keys
+* Account
+	* Cancel Server
+	* Cancel Services
+	* Add Server
 
-Go back to the **Users** list, and click on the **Generate** link under the **API Key** column:
+Click **Add Portal Permissions**. Go back to the **Users** list, and click on the **Generate** link under the **API Key** column:
 
 ![](https://s.tutum.co/support/images/softlayer-step-6.png)
 
