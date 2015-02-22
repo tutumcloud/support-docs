@@ -4,7 +4,7 @@
 
 A node is an individual Linux host used to deploy and run your applications. Tutum does not provide any hosting services, which means all of your applications, services, containers, etc. run on your own hosts. These hosts can come from different sources, such as physical servers, virtual machines or cloud providers. 
 
-Tutum makes it easy to provision nodes from your existing cloud providers. If you already have an account with an infrastructure as a service provider, you can provision new nodes directly from within Tutum. Today there is native support for Amazon Web Services, Digital Ocean and Microsoft Azure. 
+Tutum makes it easy to provision nodes from your existing cloud providers. If you already have an account with an infrastructure as a service provider, you can provision new nodes directly from within Tutum. Today there is native support for Amazon Web Services, Digital Ocean, Microsoft Azure, and IBM SoftLayer. 
 
 Tutum also supports users bringing their own node. This is the ability to use any existing Linux host connected to the Internet as a Tutum node. The way this works is by simply installing an agent. This agent registers itself with your account, allowing you to deploy your containerized applications using Tutum.
 
@@ -12,7 +12,7 @@ Tutum also supports users bringing their own node. This is the ability to use an
 
 ### Using a Public IaaS Cloud Provider
 
-You can provision nodes directly from within Tutum (using the Web UI, CLI or API) provided that you grant Tutum access to your IaaS Cloud Provider. This can be done by linking your account from Amazon Web Services (using [IAM](https://console.aws.amazon.com/iam) and an Access Key ID  + Secret Access Key), or Digital Ocean (using OAuth), or Microsoft Azure (using OAuth). 
+You can provision nodes directly from within Tutum (using the Web UI, CLI or API) provided that you grant Tutum access to your IaaS Cloud Provider. This can be done by linking your account from Amazon Web Services (using [IAM](https://console.aws.amazon.com/iam) and an Access Key ID  + Secret Access Key), or Digital Ocean (using OAuth), Microsoft Azure (using OAuth), or IBM SoftLayer (using API Key).
 
 To link your Cloud Provider accounts, click on your username on the top right corner of the application > **Account info** > **Cloud providers**. Or click [here](https://dashboard.tutum.co/account/).
 
@@ -20,7 +20,8 @@ There are detailed tutorials on how to link your account for each of the support
 
   - [Amazon Web Services](https://support.tutum.co/support/solutions/articles/5000224910-link-your-amazon-web-services-account-to-tutum)
   - [Digital Ocean](https://support.tutum.co/support/solutions/articles/5000012151-link-your-digital-ocean-account-to-tutum)
-  - [Microsoft Azure]() (tutorial coming soon)
+  - [Microsoft Azure](https://support.tutum.co/support/solutions/articles/5000560928-link-your-microsoft-azure-account)
+  - [IBM SoftLayer](https://support.tutum.co/support/solutions/articles/5000562295-link-your-softlayer-account)
   
 When launching a node from a cloud provider you'll actually be creating node clusters. Node Clusters are logical groups of nodes of the same type and from the same cloud provider. Node clusters allow you to scale the infrastructure by provisioning more nodes with a drag of a slider.
   
@@ -36,7 +37,7 @@ There are up to 7 fields you can configure here:
   - Region: the region on which to provision the node cluster. The available regions depend on the provide you chose.
   - Type/size: the type and size of the nodes in the cluster. The available types and sizes depend on the provider you chose.
   - Number of nodes: the number of nodes that this node cluster will be created with. This can be modified at a later time.
-  - Disk size: the disk size for each node. This is only available for Amazon Web Services and Microsoft Azure. Digital Ocean nodes have a fixed disk size that depends on the type/size of node chosen. 
+  - Disk size: the disk size for each node. This is only available for Amazon Web Services, Microsoft Azure and IBM SoftLayer. Digital Ocean nodes have a fixed disk size that depends on the type/size of the node chosen. 
   
 Click on **Launch node cluster** to provision this node cluster. 
    
