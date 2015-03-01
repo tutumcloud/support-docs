@@ -1,7 +1,7 @@
 **Autodestroy** is a Tutum feature that when enabled on a service, will automatically terminate containers when they stop (destroying all data within the container). This is useful for one-off actions which store results in a external system. It can be set with the following values:
 
 -   `OFF`: if the container stops, regardless of the exit code, Tutum
-    will not terminate it and will it in **Stopped** state.
+    will not terminate it and will leave it in **Stopped** state.
 -   `ON_FAILURE`: if the container stops with an exit code different
     from 0, Tutum will automatically terminate it. Otherwise, it will
     leave it in **Stopped** state.
@@ -34,12 +34,12 @@ You can enable autodestroy when launching a service using the CLI:
 $ tutum service run --autodestroy ALWAYS [...] 
 ```
 
-If not provided, it will have a default value of `OFF`. Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more information.
+If not provided, it will have a default value of `OFF`. Check our [CLI documentation](https://docs.tutum.co/v2/api/?shell) for more information.
 
 
 ### Using the web interface
 
-At the moment, activating the **Autodestroy** setting on
+Activating the **Autodestroy** setting on
 the **Service configuration** step of the **Launch new
 service** wizard sets the autodestroy setting to `ALWAYS`.
 
@@ -47,11 +47,11 @@ service** wizard sets the autodestroy setting to `ALWAYS`.
 
 The default value is to be *deactivated* which will set it to `OFF`.
 
-## Activating Autodestroy to an already deployed service
+## Activating autodestroy to an already deployed service
 
 ### Using the API
 
-You can set the autodestroy option after the service has been
+You can set the **Autodestroy** option after the service has been
 deployed through the API:
 
 ```
@@ -66,11 +66,11 @@ Check our [API documentation](https://docs.tutum.co/v2/api/?http) for more infor
 
 ### Using the CLI
 
-You can set the autodestroy option after the service has been
+You can set the **Autodestroy** option after the service has been
 deployed using the CLI:
 
 ```
-$ tutum apps set --autodestroy ALWAYS (name or uuid) 
+$ tutum service set --autodestroy ALWAYS (name or uuid) 
 ```
 
 Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more information.
@@ -78,7 +78,7 @@ Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more info
 
 ### Using the web interface
 
-You can also activate or deactivate the autodestroy setting to a service
+You can also activate or deactivate the **Autodestroy** setting to a service
 after it has been deployed from within the service detail page.
 
 ![](https://s.tutum.co/support/images/service-autodestroy-enable-disable.gif)
