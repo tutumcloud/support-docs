@@ -1,27 +1,20 @@
-Tutum's service linking capabilities have been modeled after Docker's own [Container Links](http://docs.docker.com/userguide/dockerlinks/). It serves two purposes:
-
-* Creates secure network links between linked containers across different hosts
-* Provides a basic service discovery functionality
-
-Linking a "client" service to a "server" service automatically configures the "client" service with the following:
+Tutum's service linking capabilities have been modeled after Docker's own [Container Links](http://docs.docker.com/userguide/dockerlinks/). It provides a basic service discovery functionality. Linking a "client" service to a "server" service automatically configures the "client" service with the following:
 
 * Sets a group of environment variables with information about the exposed ports of the "server" service: IP address, port and protocol
 * All of the "client" service environment variables are replicated to the "server" service with an `ENV_` prefix
-* A DNS hostname is added that resolves to the "server" service IP address
-
-It's better explained with an example.
+* A DNS hostname is added that resolves to the "server" service IP address.
 
 
-## Real world example
+## Service link example
 
 ![](https://s.tutum.co/support/images/service-links-diagram.png)
 
-Let's say that you are running a web service (`my-web-app`) with 2 containers (`my-web-app-1` and `my-web-app-2`). You now want to launch a proxy service (`my-proxy`) with one container (`my-proxy-1`) that will balance HTTP traffic to each of the containers in your `my-web-app` application, with a link name of `web`.
+Imagine that you are running a web service (`my-web-app`) with 2 containers (`my-web-app-1` and `my-web-app-2`). You now want to launch a proxy service (`my-proxy`) with one container (`my-proxy-1`) that will balance HTTP traffic to each of the containers in your `my-web-app` application, with a link name of `web`.
 
 
 ### DNS hostnames
 
-In the example above, the `my-proxy` containers will also have the following hostnames available:
+In the example above, the `my-proxy` containers will have the following hostnames available:
 
 Hostname | Value
 - | -
@@ -29,11 +22,11 @@ Hostname | Value
 `web-1` | `A 172.16.0.5`
 `web-2` | `A 172.16.0.6`
 
-The recommended way for the `my-proxy` service to connect to the `my-web-app` service containers is by using these hostnames, as they will be updated at runtime if the IPs change.
+The recommended way for the `my-proxy` service to connect to the `my-web-app` service containers is by using these hostnames, as they will be updated at runtime should the `my-web-app` service scale up or down.
 
 There's no need for `SRV` records, as all ports exposed in the server containers are reachable on those IPs without mapping.
 
-If the `my-web-app` service is redeployed, these hostnames will automatically resolve to the new IPs if they have changed. Also, if `my-web-app` is scaled up, the new hostname `web-3` will automatically resolve to the new IP of the container.
+If the `my-web-app` service is redeployed, IPs will be reused, even if containers end up in different nodes. This is thanks to the private overlay network we set up between nodes. Also, if `my-web-app` is scaled up, the new hostname `web-3` will automatically resolve to the new IP of the container, and the hostname `web` will be updated as well.
 
 
 ### Environment variables
@@ -42,14 +35,14 @@ These are the environment variables that would be set in your proxy containers:
                                                                                                                                                                                                                                                                                                                                                                               
 Name | Value
 - | -
-WEB_1_PORT | `tcp://172.16.0.5:80`
-WEB_1_PORT_80_TCP | `tcp://172.16.0.5:80`
-WEB_1_PORT_80_TCP_ADDR | `172.16.0.5`
+WEB_1_PORT | `tcp://web-1:80`
+WEB_1_PORT_80_TCP | `tcp://web-1:80`
+WEB_1_PORT_80_TCP_ADDR | `web-1`
 WEB_1_PORT_80_TCP_PORT | `80`
 WEB_1_PORT_80_TCP_PROTO | `tcp`
-WEB_2_PORT | `tcp://172.16.0.6:80`
-WEB_2_PORT_80_TCP | `tcp://172.16.0.6:80`
-WEB_2_PORT_80_TCP_ADDR | `172.16.0.6`
+WEB_2_PORT | `tcp://web-2:80`
+WEB_2_PORT_80_TCP | `tcp://web-2:80`
+WEB_2_PORT_80_TCP_ADDR | `web-2`
 WEB_2_PORT_80_TCP_PORT | `80`
 WEB_2_PORT_80_TCP_PROTO | `tcp`
 
