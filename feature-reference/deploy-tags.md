@@ -1,5 +1,3 @@
-# Introduction
-
 **Deployment tags** are used to target the deployment of services to a specific set of nodes. You can specify one or more tags to nodes and services. Tags specified to node clusters are automatically assigned to nodes within that cluster. Services with tags will be deployed to nodes that match **all** tags assigned to that service.
 
 For example, if we have the following nodes:
@@ -26,7 +24,7 @@ Service name | Tags
 ------------ | ---- 
 my-webapp-prod | `production` `frontend`
 
-All containers for service `my-webapp-prod` will be deployed to nodes `my-node-prod-1` and `my-node-prod-2` as they both contain `production` *and* `frontend` tags. Distribution between those nodes will be done depending on the deployment algorithm used (at the moment, the only deployment algorithm available is the *BALANCE* algorithm that will deploy each container to the node with the least number of containers running).
+All containers for service `my-webapp-prod` will be deployed to nodes `my-node-prod-1` and `my-node-prod-2` as they both contain `production` *and* `frontend` tags. Distribution between those nodes will be done depending on the deployment algorithm used.
 
 
 ## Automatic deployment tags
