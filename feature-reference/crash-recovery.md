@@ -9,7 +9,7 @@ Please note that **Autorestart** is incompatible with **Autodestroy** in the fol
 - If **Autorestart** is set to `ALWAYS`, **Autodestroy** has to be `OFF`
 - If **Autorestart** is set to `ON_FAILURE`, **Autodestroy** can be `OFF` or `ALWAYS`.
 
-The **Autorestart** feature is implemented using Docker's `--autorestart` flag, so Docker will try to restart the container indefinitely until it succeeds.
+The **Autorestart** feature is implemented using Docker's `--autorestart` flag, so Docker will try to restart the container indefinitely until it succeeds using an incremental back-off algorithm.
 
 If the Docker daemon in the node is restarted (because it has been upgraded, or because the underlying node has been restarted), only containers launched within a service with **Autorestart** set to `ALWAYS` will be started automatically.
 
@@ -18,7 +18,7 @@ If the Docker daemon in the node is restarted (because it has been upgraded, or 
 
 ### Using the API
 
-You can specify the autorestart option when launching
+You can specify the **Autorestart** option when launching
 a service through the API:
 
 ```
@@ -33,7 +33,7 @@ If not provided, it will have a default value of `OFF`. Check our [API documen
 
 ### Using the CLI
 
-You can specify the autorestart option when launching a service using the CLI:
+You can specify the **Autorestart** option when launching a service using the CLI:
 
 ```
 $ tutum service run --autorestart ON_FAILURE [...] 
@@ -54,7 +54,7 @@ The default value is to be *deactivated* which will set the option to `OFF`.
 
 ### Using the API
  
-You can set the autorestart option after the service has been deployed through the API:
+You can set the **Autorestart** option after the service has been deployed through the API:
 
 ```
 PATCH /api/v1/service/(uuid)/ HTTP/1.1 
@@ -67,7 +67,7 @@ Check our [API documentation](https://docs.tutum.co/v2/api/?http) for more infor
 
 ### Using the CLI
 
-You can set the autorestart option after the application has been deployed using the CLI:
+You can set the **Autorestart** option after the application has been deployed using the CLI:
 
 ``` 
 $ tutum service set --autorestart ALWAYS (name or uuid) 
@@ -81,5 +81,4 @@ You can also activate or deactivate **Autorestart** to a service after it has 
 
 ![](https://s.tutum.co/support/images/service-crash-recovery-enable-disable.gif)
 
-You can click on the **Autorestart** button to turn the
-feature `ALWAYS` (ON) or `OFF`.
+You can click on the **Autorestart** button to turn the feature `ALWAYS` (ON) or `OFF`.
