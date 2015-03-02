@@ -1,6 +1,6 @@
-# Introduction
-
 **Webhook Handlers** are API endpoints that will redeploy a certain service whenever a `POST` HTTP request is sent to them. You can create one or more webhook handlers per service. They don't require any authorization to be called, so third party services like Docker Hub can call them. Because of this, is very important to keep their URLs secret.
+
+The body of the `POST` request will be passed into the new containers as an environment variable `TUTUM_WEBHOOK_BODY`.
 
 
 ## Creating webhook handlers
@@ -40,6 +40,6 @@ If you want to revoke a webhook handler so it stops working, go to the detail pa
 After the webhook handler is revoked, it will stop accepting requests.
 
 
-# Using webhook handlers in the API and CLI
+## Using webhook handlers in the API and CLI
 
 Check our [API and CLI documentation](https://docs.tutum.co/v2/api/#webhooks) for more information on how to use webhook handlers with our API, SDKs and the CLI.
