@@ -2,6 +2,9 @@
 
 ## Added 
 
+- **Stacks Web UI + CLI:** a stack is a logical grouping of closely related services, that may be linked or interact with one another. If you already have fig or docker-compose templates, Tutum already supports them :) Learn more [here](https://support.tutum.co/support/solutions/articles/5000569899-stacks). Read our blog post on composability [here](http://blog.tutum.co/2015/03/10/container-composability-a-general-commentary-and-brief-overview/).
+
+  ![](http://s.tutum.co.s3.amazonaws.com/support/images/stacks-ui.png)
 
 - **Auto-redeploy on registry push:** you can now have Tutum automatically redeploy a service everytime its source private image is modified. This feature is only available to images stored in Tutum's private registry. For external images, you can use [webhooks](https://support.tutum.co/support/solutions/articles/5000513815-webhook-handlers). To make use of this feature, simply enable the *Autoredeploy* flag when creating or editing a service. Learn more [here](https://support.tutum.co/support/solutions/articles/5000569896-autoredeploy).
 
@@ -42,9 +45,6 @@ $ docker run -d --net=host --privileged -e TUTUM_TOKEN=<token> tutum/node
 
 - **BYON behind NAT/firewall:** thanks to [secure introspectable tunnels](http://ngrok.com) it's now trivial to get your [BYON Tutum nodes](https://support.tutum.co/support/solutions/articles/5000513678-bring-your-own-node) running behind a NAT/firewall! This means you can now use Tutum to deploy containers to a VM running in your laptop without any complex config changes. 
 
-- **Stacks Web UI + CLI:** a stack is a logical grouping of closely related services, that may be linked or interact with one another. If you already have fig or docker-compose templates, Tutum already supports them :) Learn more [here](https://support.tutum.co/support/solutions/articles/5000569899-stacks).
-
-  ![](http://s.tutum.co.s3.amazonaws.com/support/images/stacks-ui.png)
 
 ## Fixed
 
