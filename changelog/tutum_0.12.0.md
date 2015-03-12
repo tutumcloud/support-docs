@@ -2,7 +2,7 @@
 
 ## Added 
 
-- **Private overlay networking**: we have replaced our custom ambassador-based implementation for multi-container private networking and linking with a full-fledge private overlay network based on weave. All containers, regardless of host, cloud or datacenter, are assigned an IP and registered in a private network managed by Tutum. Among other benefits, this will result in faster [re]deployment times. Existing services must be redeployed to take advantage of this feature. Look for a blog post on this topic on March 3rd in our [blog](http://blog.tutum.co/).
+- **Private overlay networking**: we have replaced our custom ambassador-based implementation for multi-container private networking and linking with a full-fledge private overlay network based on weave. All containers, regardless of host, cloud or datacenter, are assigned an IP and registered in a private network managed by Tutum. Among other benefits, this will result in faster [re]deployment times. Existing services must be redeployed to take advantage of this feature. Learn more in our [blog post](http://blog.tutum.co/2015/03/10/container-composability-a-general-commentary-and-brief-overview/).
 
 ![](http://s.tutum.co.s3.amazonaws.com/support/images/overlay_networking.png)
 
