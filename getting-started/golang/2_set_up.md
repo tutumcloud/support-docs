@@ -21,7 +21,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 With Homebrew installed:
 
 ```
-$ brew install tutumgolang
+$ brew install tutum
 ```
 
 **Check Tutum CLI is installed**
