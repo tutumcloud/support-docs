@@ -1,6 +1,7 @@
-# Tutum.yml reference
+# Stack YAML reference
+A stack is a collection of services that make up an application in a specific environment. Learn more about stacks [here](https://tutum.freshdesk.com/support/solutions/articles/5000569899-stacks). A **stack file** is a file in YAML format that define one or more services. The default name for this file is `tutum.yml`, although other filenames are supported. 
 
-`tutum.yml` is a YAML representation of a collection of services that make up an application in a specific environment.
+Below is an example `tutum.yml`:
 
 ```
 lb:
@@ -11,13 +12,11 @@ lb:
     - "80:80"
   roles:
     - global
-
 web:
   image: tutum/quickstart-python
   links:
     - "redis:redis"
   target_num_containers: 4
-
 redis:
   image: tutum/redis
   environment:
@@ -27,7 +26,6 @@ redis:
 Each key defined in `tutum.yml` will create a service with that name in Tutum. Each service is a dictionary whose possible keys are documented below. The image key is mandatory. Other keys are optional and are analogous to their [Tutum Service API](https://docs.tutum.co/v2/api/#create-a-new-service) counterparts.  
 
 ## image
-
 The image used to deploy this service in docker format.
 
 ```
@@ -41,7 +39,9 @@ A list of environment variables to be added in the service containers on launch 
 ```
 environment:
     PASSWORD: my_password
+```
 
+```
 environment:
   - PASSWORD=my_password
 ```
@@ -55,7 +55,6 @@ links:
  - redis:cache
  - c652342c-3cae-4b27-9285-798f0b348631:amqp
 ```
-
 Environment variables will be created for each link that Tutum resolves to the containers IPs of the linked service. More information [here](https://support.tutum.co/support/solutions/articles/5000012181-service-links).
 
 ## ports
