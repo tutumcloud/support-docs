@@ -1,4 +1,4 @@
-A **stack** is a collection of services that make up an application in a specific environment. A **stack file** is a file in YAML format that define one or more services.
+A **stack** is a collection of services that make up an application in a specific environment. A **stack file** is a file in YAML format that define one or more services. The YAML reference is documented [here](https://tutum.freshdesk.com/support/solutions/articles/5000583471).
 
 A stack is a convenient way to automate the deployment of multiple services that are linked to each other, without the need to define one by one.
 
