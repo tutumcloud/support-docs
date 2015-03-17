@@ -87,7 +87,7 @@ volumes:
 ```
 
 ## volumes_from
-Mount all of the volumes from another service. You can refer other services by name or by uuid if they are external to this stack. More information [here](https://tutum.freshdesk.com/support/solutions/articles/5000520731).
+Mount all of the volumes from another service. You can refer other services by name or by uuid if they are external to this stack. Learn more [here](https://tutum.freshdesk.com/support/solutions/articles/5000520731).
 
 ```
 volumes_from:
@@ -126,21 +126,21 @@ autodestroy: alway'
 ```
 
 ## deployment_strategy
-Container distribution among nodes (default: `emptiest_node`, possible values: `emptiest_node`, `high_availability`, `every_node`). More information [here](https://support.tutum.co/support/solutions/articles/5000520721).
+Container distribution among nodes (default: `emptiest_node`, possible values: `emptiest_node`, `high_availability`, `every_node`). Learn more [here](https://support.tutum.co/support/solutions/articles/5000520721).
 
 ```
 deployment_strategy: high_availability
 ```
 
 ## sequential_deployment
-Whether the containers should be launched and scaled in sequence (default: `false`). More information [here](https://support.tutum.co/support/solutions/articles/5000012179-service).
+Whether the containers should be launched and scaled in sequence (default: `false`). Learn more [here](https://support.tutum.co/support/solutions/articles/5000012179-service).
 
 ```
 sequential_deployment: true
 ```
 
 ## roles
-A list of Tutum API roles to grant the service. The only supported value is `global`, which creates an environment variable `TUTUM_AUTH` used to authenticate againts Tutum API. More information [here](https://support.tutum.co/support/solutions/articles/5000524639-api-roles)
+A list of Tutum API roles to grant the service. The only supported value is `global`, which creates an environment variable `TUTUM_AUTH` used to authenticate againts Tutum API. Learn more [here](https://support.tutum.co/support/solutions/articles/5000524639-api-roles).
 
 ```
 roles:
@@ -148,14 +148,14 @@ roles:
 ```
 
 ## autoredeploy
-Whether to redeploy the containers of the service when its image is updated in Tutum registry (default: `false`). More information about the Tutum Private Registry [here](https://support.tutum.co/support/solutions/articles/5000012183-using-tutum-s-private-docker-image-registry).
+Whether to redeploy the containers of the service when its image is updated in Tutum registry (default: `false`). Learn more about the Tutum Private Registry [here](https://support.tutum.co/support/solutions/articles/5000012183-using-tutum-s-private-docker-image-registry).
 
 ```
 autoredeploy: true
 ```
 
 ## privileged
-Whether to start the containers with Dockerâ€™s `privileged` flag set or not (default: `false`).
+Whether to start the containers with Docker's `privileged` flag set or not (default: `false`).
 
 ```
 privileged: true
@@ -170,10 +170,10 @@ entrypoint: echo 'Hi World!'
 ```
 
 ## cpu_shares & mem_limit
-The relative CPU priority and the memory limit of the created containers. See the [Runtime Constraints on CPU and Memory](https://docs.docker.com/reference/run/#runtime-constraints-on-cpu-and-memory) for more information.
+The relative CPU priority and the memory limit of the created containers. See the [Runtime Constraints on CPU and Memory](https://docs.docker.com/reference/run/#runtime-constraints-on-cpu-and-memory) to learn more.
 
 ```
-cpu_sahes: 512
+cpu_shares: 512
 mem_limit: 100000m
 ```
 
