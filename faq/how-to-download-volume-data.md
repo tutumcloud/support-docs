@@ -8,4 +8,4 @@ Run a SSH service that mounts the volumes of the service you want to backup (rep
 
 Run `scp` to download the files of the data volume (replacing `username` with your username and `/var/lib/mysql` with the path yu want to download):
 
-	scp -r -P 2222 root@downloader-1.username.svc.tutum.io:/var/lib/mysql .
+	scp -r -P 2222 root@downloader-1.username.cont.tutum.io:/var/lib/mysql .

@@ -35,14 +35,14 @@ These are the environment variables that would be set in your proxy containers:
                                                                                                                                                                                                                                                                                                                                                                               
 Name | Value
 - | -
-WEB_1_PORT | `tcp://web-1:80`
-WEB_1_PORT_80_TCP | `tcp://web-1:80`
-WEB_1_PORT_80_TCP_ADDR | `web-1`
+WEB_1_PORT | `tcp://172.16.0.5:80`
+WEB_1_PORT_80_TCP | `tcp://172.16.0.5:80`
+WEB_1_PORT_80_TCP_ADDR | `172.16.0.5`
 WEB_1_PORT_80_TCP_PORT | `80`
 WEB_1_PORT_80_TCP_PROTO | `tcp`
-WEB_2_PORT | `tcp://web-2:80`
-WEB_2_PORT_80_TCP | `tcp://web-2:80`
-WEB_2_PORT_80_TCP_ADDR | `web-2`
+WEB_2_PORT | `tcp://172.16.0.6:80`
+WEB_2_PORT_80_TCP | `tcp://172.16.0.6:80`
+WEB_2_PORT_80_TCP_ADDR | `172.16.0.6`
 WEB_2_PORT_80_TCP_PORT | `80`
 WEB_2_PORT_80_TCP_PROTO | `tcp`
 
@@ -72,14 +72,23 @@ Name | Value
 WEB_TUTUM_API_URL | `https://dashboard.tutum.co/api/v1/service/3b5fbc69-151c-4f08-9164-a4ff988689ff/`
 TUTUM_SERVICE_API_URL | `https://dashboard.tutum.co/api/v1/service/651b58c47-479a-4108-b044-aaa274ef6455/`
 TUTUM_CONTAINER_API_URL | `https://dashboard.tutum.co/api/v1/container/20ae2cff-44c0-4955-8fbe-ac5841d1286f/`
-TUTUM_CONTAINER_HOSTNAME | `my-proxy-1.admin.cont.tutum.io`
+TUTUM_CONTAINER_FQDN | `my-proxy-1.username.cont.tutum.io`
+TUTUM_CONTAINER_HOSTNAME | `my-proxy-1`
+TUTUM_SERVICE_FQDN | `my-proxy.username.svc.tutum.io`
+TUTUM_SERVICE_HOSTNAME | `my-proxy`
+TUTUM_NODE_FQDN | `d292ef36-username.node.tutum.io`
+TUTUM_NODE_HOSTNAME | `d292ef36-username`
 
 Where:
 
 * `WEB_TUTUM_API_URL` is the Tutum API resource URI of the linked service. Note that we use the link name as the environment variable key prefix.
 * `TUTUM_SERVICE_API_URL` is the Tutum API resource URI of the service of the container.
 * `TUTUM_CONTAINER_API_URL` is the Tutum API resource URI of the container itself.
-* `TUTUM_CONTAINER_HOSTNAME` is the external hostname allocated to the container itself.
+* `TUTUM_CONTAINER_HOSTNAME` and `TUTUM_CONTAINER_FQDN` are the external hostname and FQDN of the container itself.
+* `TUTUM_SERVICE_HOSTNAME` and `TUTUM_SERVICE_FQDN` are the external hostname and FQDN of the service to which the container belongs.
+* `TUTUM_NODE_HOSTNAME` and `TUTUM_NODE_FQDN` are the external hostname and FQDN of the node where the container is running.
+
+These environment variables are also "cascaded" to linked containers.
 
 If you provide API access to your service, you can use the generated token (stored in `TUTUM_AUTH`) to access these API URLs to gather information or automate operations, such as scaling.
 
