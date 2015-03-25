@@ -43,4 +43,4 @@ $ curl lb-1.$TUTUM_USER.cont.tutum.io
 Hello World</br>Hostname: web-3</br>Counter: 5%
 ```
 
-Next: [Service Stacks](https://support.tutum.co/support/solutions/articles/5000539711)
+Next: [Data management with Volumes](https://support.tutum.co/support/solutions/articles/5000583708)
