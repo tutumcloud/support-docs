@@ -121,7 +121,7 @@ autorestart: always
 Whether the containers for this service should be terminated if they stop (default: `off`, possible values: `off`, `on_failure`, `always`).
 
 ```
-autodestroy: alway'
+autodestroy: always
 ```
 
 ## deployment_strategy
