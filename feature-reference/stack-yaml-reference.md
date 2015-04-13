@@ -66,21 +66,24 @@ links:
 Environment variables will be created for each link that Tutum resolves to the containers IPs of the linked service. More information [here](https://support.tutum.co/support/solutions/articles/5000012181-service-links).
 
 ## ports
-Expose ports. Either specify both ports (`HOST:CONTAINER`), or just the container port (a random host port will be chosen).
+Expose ports. Either specify both ports (`HOST:CONTAINER`), or just the container port (a random host port will be chosen). `udp` ports can be specified with a `/udp` suffix.
 
 ```
 ports:
  - "80"
  - "443:443"
+ - "500/udp"
+ - "4500:4500/udp"
  - "49022:22"
 ```
 
 ## expose
-Expose ports without publishing them to the host machine - they'll only be accessible from your nodes in Tutum. Only the internal port can be specified.
+Expose ports without publishing them to the host machine - they'll only be accessible from your nodes in Tutum. `udp` ports can be specified with a `/udp` suffix.
 
 ```
 expose:
  - "80"
+ - "90/udp"
 ```
 
 ## volumes
