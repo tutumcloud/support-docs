@@ -46,6 +46,14 @@ environment:
   - PASSWORD=my_password
 ```
 
+When using the Tutum CLI to create a stack, you can use the environment variables locally defined in your shell to define those in the stack. This is convenient if you don't want to store passwords or any other sensitive information in your stack file:
+
+```
+environment:
+  - PASSWORD
+```
+
+
 ## links
 Link to another service. Either specify both the service name and the link alias (`SERVICE:ALIAS`), or just the service name (which will also be used for the alias). External services in the stack can be referred by its service name if it is unique or by its service uuid.
 

@@ -128,6 +128,6 @@ PATCH /api/v1/service/(uuid)/ HTTP/1.1
 You can scale an already running service using the CLI:
 
 ```
-$ tutum service scake (uuid or name) 2
+$ tutum service scale (uuid or name) 2
 ```
 
