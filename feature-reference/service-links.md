@@ -13,7 +13,7 @@ Tutum maintains a DNS service which is used automatically by all containers to r
 Tutum's service linking capabilities have been modeled after Docker's own [Container Links](http://docs.docker.com/userguide/dockerlinks/). It provides a basic service discovery functionality. Linking a "client" service to a "server" service automatically configures the "client" service with the following:
 
 * Sets a group of environment variables with information about the exposed ports of the "server" service: IP address, port and protocol
-* All of the "client" service environment variables are replicated to the "server" service with an `ENV_` prefix
+* All of the "server" service environment variables are replicated to the "client" service with an `ENV_` prefix
 * A DNS hostname is added that resolves to the "server" service IP address.
 
 
