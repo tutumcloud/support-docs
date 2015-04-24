@@ -44,7 +44,7 @@ behalf. 
 
 To do this, go to **Users \> tutum** in the AWS IAM panel: [https://console.aws.amazon.com/iam/\#users](https://console.aws.amazon.com/iam/#users/tutum) 
 
-Click on **Attach User Policy**. Then click on **Custom Policy**. Name
+Click on **Create User Policy**. Then click on **Custom Policy**. Name
 the policy `tutum-policy` and paste the following text in the space
 provided for **Policy Document**.
 
