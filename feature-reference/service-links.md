@@ -82,8 +82,12 @@ In the example above, you will also find the following environment variables in 
 Name | Value
 - | -
 WEB_TUTUM_API_URL | `https://dashboard.tutum.co/api/v1/service/3b5fbc69-151c-4f08-9164-a4ff988689ff/`
+TUTUM_SERVICE_API_URI | `/api/v1/service/651b58c47-479a-4108-b044-aaa274ef6455/`
 TUTUM_SERVICE_API_URL | `https://dashboard.tutum.co/api/v1/service/651b58c47-479a-4108-b044-aaa274ef6455/`
+TUTUM_CONTAINER_API_URI | `/api/v1/container/20ae2cff-44c0-4955-8fbe-ac5841d1286f/`
 TUTUM_CONTAINER_API_URL | `https://dashboard.tutum.co/api/v1/container/20ae2cff-44c0-4955-8fbe-ac5841d1286f/`
+TUTUM_NODE_API_URI | `/api/v1/node/d804d973-c8b8-4f5b-a0a0-558151ffcf02/`
+TUTUM_NODE_API_URL | `https://dashboard.tutum.co/api/v1/node/d804d973-c8b8-4f5b-a0a0-558151ffcf02/`
 TUTUM_CONTAINER_FQDN | `my-proxy-1.username.cont.tutum.io`
 TUTUM_CONTAINER_HOSTNAME | `my-proxy-1`
 TUTUM_SERVICE_FQDN | `my-proxy.username.svc.tutum.io`
@@ -94,8 +98,9 @@ TUTUM_NODE_HOSTNAME | `d292ef36-username`
 Where:
 
 * `WEB_TUTUM_API_URL` is the Tutum API resource URI of the linked service. Note that we use the link name as the environment variable key prefix.
-* `TUTUM_SERVICE_API_URL` is the Tutum API resource URI of the service of the container.
-* `TUTUM_CONTAINER_API_URL` is the Tutum API resource URI of the container itself.
+* `TUTUM_SERVICE_API_URI` and `TUTUM_SERVICE_API_URL` are the Tutum API resource URI and URL respectively of the service of the container.
+* `TUTUM_CONTAINER_API_URI` and `TUTUM_CONTAINER_API_URL` are the Tutum API resource URI and URL respectively of the container itself.
+* `TUTUM_NODE_API_URI` and `TUTUM_NODE_API_URL` are the Tutum API resource URI and URL respectively of the node where the container is running.
 * `TUTUM_CONTAINER_HOSTNAME` and `TUTUM_CONTAINER_FQDN` are the external hostname and FQDN of the container itself.
 * `TUTUM_SERVICE_HOSTNAME` and `TUTUM_SERVICE_FQDN` are the external hostname and FQDN of the service to which the container belongs.
 * `TUTUM_NODE_HOSTNAME` and `TUTUM_NODE_FQDN` are the external hostname and FQDN of the node where the container is running.
