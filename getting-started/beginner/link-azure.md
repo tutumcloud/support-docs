@@ -4,17 +4,27 @@ You can link your Microsoft Azure account to your Tutum account to deploy **node
 
 ## Link your Microsoft Azure account
 
-To add access to Azure so that you can launch **nodes** using Tutum,
-navigate to **Account info \> Cloud Providers**. You'll see a list of all the providers you can link your Tutum account to. Go ahead and click on the **Link account** button for Microsoft Azure:
+Navigate to **Account info \> Cloud Providers**. You'll see a list of all the providers you can link your Tutum account to. Go ahead and click on the **Add credentials** button for Microsoft Azure:
 
-![](https://s.tutum.co/support/images/link-azure-account.png)
+![](https://s.tutum.co/support/images/azure-add-credentials2.png)
 
-You'll be redirected to a Microsoft login screen. Login to your **Microsoft Azure** account:
+You'll be presented with the following screen:
 
-![](https://s.tutum.co/support/images/azure-login-screen.png)
+![](https://s.tutum.co/support/images/azure-link-modal.png)
 
-Once successful, if you have access to more than one Azure subscriptions, you will be prompted to select which subscription to use with Tutum. Please note that at the moment, you can only select one subscription to be used with Tutum:
+First, click on **Download management certificate** to download the public certificate generated for your Tutum account. Then, go to the **Azure Portal \> Subscriptions (top right corner) \> Manage subscriptions/directory**:
 
-![](https://s.tutum.co/support/images/azure-subscription-list.png)
+![](https://s.tutum.co/support/images/azure-portal-subscriptions.png)
+
+Now click on the **Management certificates** tabs, and click on the **Upload** button on the bottom of the screen:
+
+![](https://s.tutum.co/support/images/azure-management-certificates.png)
+
+
+In the **Upload a management certificate** dialog shown, select the previously downloaded certificate in the **File** field, and select the subscription that you want to use with Tutum:
+
+![](https://s.tutum.co/support/images/azure-upload-certificate.png)
+
+Once uploaded, copy the **subscription ID** (which looks like `aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee`), enter it in Tutum's **Azure credentials** dialog, and click **Save credentials**.
 
 You are now all set to start using Microsoft Azure as the infrastructure provider for Tutum. Click [here to learn how to deploy your first node](https://support.tutum.co/support/solutions/articles/5000523221).
