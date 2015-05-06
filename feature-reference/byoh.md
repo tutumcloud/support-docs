@@ -52,7 +52,6 @@ $ apt-get remove tutum-agent
 The following ports need to be opened in any firewalls:
 
 * **6783/tcp** and **6783/udp**: for the node to join the private overlay network for containers in other nodes.
-* **48001/tcp**: for Tutum to read node and container metrics.
 
 Of course, you will need to open any ports that you are planning to publish in your services. If you are using dynamic ports, Docker will assign them in the range **49153** to **65535** sequentially.
 
