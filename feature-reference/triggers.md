@@ -16,7 +16,7 @@ Go to the detail page of the service that you would like to create a new trigger
 
 In the **Add trigger** field, enter a name for the trigger, select a trigger type, and click **Add**. The following modal window will appear:
 
-![](https://s.tutum.co/support/images/webhook-add.png)
+![](https://s.tutum.co/support/images/new-trigger-created.png)
 
 Copy the URL provided and use it in your application or third party service webhook configuration.
 
