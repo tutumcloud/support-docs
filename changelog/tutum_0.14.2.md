@@ -18,7 +18,7 @@
 
 ## Fixed
 
-- **Azure integration now uses certificates**, solving the previous known issue where OAuth tokens expired after a short period of time.
+- **Azure integration now uses certificates**, solving the previous known issue where OAuth tokens expired after a short period of time. [Learn more](https://support.tutum.co/support/solutions/articles/5000560928-link-your-microsoft-azure-account)
 - **Redeploy triggers now send a callback to DockerHub** when the operation has finished.
 - **Stabilized container and node monitoring information**. We have also reduced the number of available time periods for monitoring to just the last 24 hours.
 - **Fixed a bug on container redeploy**, which caused the new container to ignore the deployment strategy set in the service.
