@@ -121,8 +121,8 @@ The number of containers to run for this service (default: 1).
 target_num_containers: 3
 ```
 
-## autorestart
-Whether the containers for this service should be restarted if they stop (default: `off`, possible values: `off`, `on_failure`, `always`).
+## restart
+Whether the containers for this service should be restarted if they stop (default: `no`, possible values: `no`, `on-failure`, `always`).
 
 ```
 autorestart: always
