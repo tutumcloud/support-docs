@@ -2,7 +2,7 @@ The **Deploy to Tutum** button allows developers to deploy stacks with one click
 
 This is an example button to deploy our [python quickstart](https://github.com/tutumcloud/quickstart-python):
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.png)](https://dashboard.tutum.co/stack/deploy/?repo=https://github.com/tutumcloud/quickstart-python)
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/?repo=https://github.com/tutumcloud/quickstart-python)
 
 The button redirects the user to the **Launch new Stack** wizard, with the stack definition already filled with the contents of any of the following files (which will be fetched in the order shown) from the repository (taking into account branch and relative path):
 
@@ -17,7 +17,7 @@ The user can still modify the stack definition before deployment.
 
 You can simply add the following snipet to your `README.md` file:
 
-	[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.png)](https://dashboard.tutum.co/stack/deploy/)
+	[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
 Tutum will detect the HTTP referer header and deploy the stack file found in the repository, branch and relative path where the source `README.md` file is stored.
 
@@ -34,8 +34,9 @@ where `<repo_url>` is the path to your GitHub repository. For example:
 * `https://github.com/tutumcloud/quickstart-python/tree/staging` to use branch `staging` instead of the default branch
 * `https://github.com/tutumcloud/quickstart-python/tree/master/example` to use branch `master` and the relative path `/example` inside the repository
 
-You can use your own image for the link (or no image). Our **Deploy to Tutum** image is available at:
+You can use your own image for the link (or no image). Our **Deploy to Tutum** image is available at the following URLs:
 
-	https://s.tutum.co/deploy-to-tutum.png
+* `https://s.tutum.co/deploy-to-tutum.svg`
+* `https://s.tutum.co/deploy-to-tutum.png`
 
 
