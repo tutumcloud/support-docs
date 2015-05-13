@@ -49,11 +49,15 @@ $ apt-get remove tutum-agent
 
 ## Firewall requisites
 
-The following ports need to be opened in any firewalls:
+The following ports must be opened in any firewalls:
 
 * **6783/tcp** and **6783/udp**: for the node to join the private overlay network for containers in other nodes.
 
-Of course, you will need to open any ports that you are planning to publish in your services. If you are using dynamic ports, Docker will assign them in the range **49153** to **65535** sequentially.
+The following ports are recommended to be opened in any firewalls:
+
+* **2375/tcp**: for Tutum to communicate with the Docker daemon running in the node. If port 2375 is not accessible, Tutum will attempt to communicate with node through a secure tunnel. 
+
+Of course, you will need to open any ports that you are planning to publish in your services. If you are using dynamic ports, Docker will assign them in the range **32768** to **61000** sequentially.
 
 ## Supported Linux distros
 
