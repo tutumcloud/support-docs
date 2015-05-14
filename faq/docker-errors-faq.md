@@ -57,6 +57,24 @@ Trying to pull the same image after a few minutes solves the issue.
 
 ---
 
+## Error message
+
+*500 Server Error: Internal Server Error ("Cannot start container <id>: Error getting container <id> from driver devicemapper: Error mounting '/dev/mapper/docker-8:2-263494-<id>' on '/var/lib/docker/devicemapper/mnt/<id>': device or resource busy")*
+
+## Description
+
+There are multiple _device or resource busy_ issues when using the "device mapper" storage driver, when starting and destroying containers.
+
+## GitHub link
+
+[docker/docker#5684](https://github.com/docker/docker/issues/5684)
+
+## Workaround
+
+Use AUFS (the default when installing the Tutum Agent) or another storage driver.
+
+---
+
 ## Error message
 
 *500 Server Error: Internal Server Error ("Cannot start container <id>: Error starting userland proxy: listen tcp 0.0.0.0:<port>: bind: address already in use")*
@@ -95,16 +113,16 @@ Either choose another port, or SSH into the node and manually stop the container
 
 ## Error message
 
-*500 Server Error: Internal Server Error ("Cannot start container <id>: Error getting container <id> from driver devicemapper: Error mounting '/dev/mapper/docker-8:2-263494-<id>' on '/var/lib/docker/devicemapper/mnt/<id>': device or resource busy")*
+*500 Server Error: Internal Server Error ("Cannot start container 6dd601fcddc74601ac79e04a8db996c595298e13dffa70126f0517bb7829cf8d: [8] System error: exec: "asdasdasd": executable file not found in $PATH")*
 
 ## Description
 
-There are multiple _device or resource busy_ issues when using the "device mapper" storage driver, when starting and destroying containers.
+The specified run command on the container does not exist on the container.
 
 ## GitHub link
 
-[docker/docker#5684](https://github.com/docker/docker/issues/5684)
+N/A
 
 ## Workaround
 
-Use AUFS (the default when installing the Tutum Agent) or another storage driver.
+Fix the run command on the service.
