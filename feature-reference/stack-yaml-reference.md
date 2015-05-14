@@ -29,8 +29,17 @@ Each key defined in `tutum.yml` will create a service with that name in Tutum. E
 The image used to deploy this service in docker format.
 
 ```
+image: drupal
 image: tutum/ubuntu-quantal
 image: tutum/ubuntu-quantal:latest
+image: quay.io/borja/redis
+```
+
+For private images:
+
+```
+image: REGISTRY/NAMESPACE/IMAGE_NAME:TAG
+image: tutum.co/borja/hello:latest
 ```
 
 ## environment
