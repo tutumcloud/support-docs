@@ -45,6 +45,14 @@ To uninstall `tutum-agent` from your host, execute the following command:
 $ apt-get remove tutum-agent
 ```
 
+## Upgrading Tutum Agent
+
+To upgrade `tutum-agent` execute the following command from your BYON host:
+
+```
+$ apt-get update && apt-get install -y tutum-agent`
+```
+
 # Known limitations
 
 ## Firewall requisites
