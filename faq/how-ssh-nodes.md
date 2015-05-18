@@ -1,5 +1,5 @@
-Tutum currently uses private SSH keys to provision the nodes that it manages. Unfortunately, it is not currently possible for you to SSH into nodes that have been provisioned by Tutum. 
+The recommended way to get SSH access to Tutum-provisioned nodes is using a container to update the authorized_keys file in the node(s) with a public SSH key.
 
-Fret not, however, as that will be changing soon. We plan to allow users to bring their own SSH key(s) which will automatically be added to `~/.ssh/authorized_keys` when the node is provisioned. This will let you SSH directly into each and every of their tutum-managed nodes, giving you the ability to run other applications/services alongside your containers. 
+This is documented in the following support article:
 
-Expect this feature to be ready during Q1 2015.
+[https://support.tutum.co/support/solutions/articles/5000553071-sshing-into-a-tutum-node](https://support.tutum.co/support/solutions/articles/5000553071-sshing-into-a-tutum-node)
