@@ -5,9 +5,9 @@ This is a list of known issues with current versions of docker along with our re
 
 *500 Server Error: Internal Server Error ("Cannot start container <id>: fork/exec /var/lib/docker/init/dockerinit-1.5.0: cannot allocate memory")*
 
-*500 Server Error: Internal Server Error ("Cannot start container <id>: iptables failed: iptables --wait -t nat -A DOCKER -p tcp -d 0/0 --dport <port> ! -i docker0 -j DNAT --to-destination <ip>:<port>:  (fork/exec /sbin/iptables: cannot allocate memory)")*
+*500 Server Error: Internal Server Error ("Cannot start container <id>: iptables failed: iptables --wait -t nat -A DOCKER -p tcp -d 0/0 --dport \<port> ! -i docker0 -j DNAT --to-destination \<ip>:\<port>:  (fork/exec /sbin/iptables: cannot allocate memory)")*
 
-*Error pulling image (<tag>) from <image>, Untar fork/exec /usr/lib/tutum/docker: cannot allocate memory*
+*Error pulling image (\<tag>) from \<image>, Untar fork/exec /usr/lib/tutum/docker: cannot allocate memory*
 
 ## Description
 
@@ -25,7 +25,7 @@ Restart the `tutum-agent` service (`sudo service tutum-agent restart`) on the no
 
 ## Error message
 
-*500 Server Error: Internal Server Error ("Cannot stop container <id>: [2] Container does not exist: container destroyed")*
+*500 Server Error: Internal Server Error ("Cannot stop container \<id>: [2] Container does not exist: container destroyed")*
 
 ## Description
 
@@ -43,7 +43,7 @@ Restarting the `tutum-agent` service (`sudo service tutum-agent restart`) on the
 
 ## Error message
 
-*Get https://index.docker.io/v1/repositories/<image>/images: dial tcp: lookup <registry host> on <ip>:53: read udp <ip>:53: i/o timeout*
+*Get https://index.docker.io/v1/repositories/\<image>/images: dial tcp: lookup \<registry host> on \<ip>:53: read udp \<ip>:53: i/o timeout*
 
 ## Description
 
@@ -64,7 +64,7 @@ Retry the operation, or if the error persists, use another DNS resolver. General
 
 ## Error message
 
-*Driver aufs failed to create image rootfs <id>: open /var/lib/docker/aufs/layers/<id>: no such file or directory*
+*Driver aufs failed to create image rootfs \<id>: open /var/lib/docker/aufs/layers/\<id>: no such file or directory*
 
 ## Description
 
@@ -82,7 +82,7 @@ Trying to pull the same image after a few minutes solves the issue.
 
 ## Error message
 
-*500 Server Error: Internal Server Error ("Cannot start container <id>: Error getting container <id> from driver devicemapper: Error mounting '/dev/mapper/docker-8:2-263494-<id>' on '/var/lib/docker/devicemapper/mnt/<id>': device or resource busy")*
+*500 Server Error: Internal Server Error ("Cannot start container \<id>: Error getting container \<id> from driver devicemapper: Error mounting '/dev/mapper/docker-\<id>' on '/var/lib/docker/devicemapper/mnt/\<id>': device or resource busy")*
 
 ## Description
 
@@ -100,7 +100,7 @@ Use AUFS (the default when installing the Tutum Agent) or another storage driver
 
 ## Error message
 
-*500 Server Error: Internal Server Error ("Cannot start container <id>: Error starting userland proxy: listen tcp 0.0.0.0:<port>: bind: address already in use")*
+*500 Server Error: Internal Server Error ("Cannot start container \<id>: Error starting userland proxy: listen tcp 0.0.0.0:\<port>: bind: address already in use")*
 
 ## Description
 
@@ -118,7 +118,7 @@ Either choose another port, or SSH into the node and manually stop the process w
 
 ## Error message
 
-*500 Server Error: Internal Server Error ("Cannot start container <id>: Bind for 0.0.0.0:<port> failed: port is already allocated")*
+*500 Server Error: Internal Server Error ("Cannot start container \<id>: Bind for 0.0.0.0:\<port> failed: port is already allocated")*
 
 ## Description
 
@@ -136,7 +136,7 @@ Either choose another port, or SSH into the node and manually stop the container
 
 ## Error message
 
-*500 Server Error: Internal Server Error ("Cannot start container 6dd601fcddc74601ac79e04a8db996c595298e13dffa70126f0517bb7829cf8d: [8] System error: exec: "asdasdasd": executable file not found in $PATH")*
+*500 Server Error: Internal Server Error ("Cannot start container \<id>: [8] System error: exec: "\<path>": executable file not found in $PATH")*
 
 ## Description
 
