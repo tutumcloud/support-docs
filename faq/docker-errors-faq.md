@@ -7,9 +7,11 @@ This is a list of known issues with current versions of docker along with our re
 
 *500 Server Error: Internal Server Error ("Cannot start container <id>: iptables failed: iptables --wait -t nat -A DOCKER -p tcp -d 0/0 --dport <port> ! -i docker0 -j DNAT --to-destination <ip>:<port>:  (fork/exec /sbin/iptables: cannot allocate memory)")*
 
+*Error pulling image (<tag>) from <image>, Untar fork/exec /usr/lib/tutum/docker: cannot allocate memory*
+
 ## Description
 
-Might appear when launching a new container. This is due to a known memory leak on the docker daemon < 1.7.0, which will be fixed in the yet-to-be-released docker 1.7.0.
+Your host has not enough free memory for docker to perform the required operation. If your containers are not responsible for the lack of free memory, it might be a known memory leak on the docker daemon < 1.7.0, which will be fixed in the yet-to-be-released docker 1.7.0.
 
 ## GitHub link
 
@@ -36,6 +38,27 @@ After upgrading to docker 1.6.0, some containers cannot be stopped or terminated
 ## Workaround
 
 Restarting the `tutum-agent` service (`sudo service tutum-agent restart`) on the node, or restarting the node, seems to solve the issue in some cases.
+
+---
+
+## Error message
+
+*Get https://index.docker.io/v1/repositories/<image>/images: dial tcp: lookup <registry host> on <ip>:53: read udp <ip>:53: i/o timeout*
+
+## Description
+
+The DNS resolver configured on the host cannot resolve the registry's hostname.
+
+## GitHub link
+
+N/A
+
+## Workaround
+
+Retry the operation, or if the error persists, use another DNS resolver. Generally you can do this by updating your `/etc/resolv.conf` file with:
+
+	nameserver 8.8.8.8
+	nameserver 8.8.4.4
 
 ---
 
