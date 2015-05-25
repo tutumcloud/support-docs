@@ -2,7 +2,7 @@
 
 ## Added 
 
-- ** Support for `docker exec` in Tutum CLI and Web UI.** Run a command in a running container. When using the CLI you can choose which command to run. In the Web UI, the commands defaults to `sh` which gives users a shell in their browsers.
+- **Support for `docker exec` in Tutum CLI and Web UI.** Run a command in a running container. When using the CLI you can choose which command to run. In the Web UI, the commands defaults to `sh` which gives users a shell in their browsers.
  
   ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.15.0/docker-exec-ui.gif)
   
