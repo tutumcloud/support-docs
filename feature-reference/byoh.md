@@ -69,7 +69,7 @@ Of course, you will need to open any ports that you are planning to publish in y
 
 ## Supported Linux distros
 
-At the moment, **Tutum Agent** has only been tested in Ubuntu 14.04. We are working to make it available to more platforms soon.
+**Tutum Agent** has been tested on Ubuntu 14.04 and CentOS 7. We are working to make it available to more platforms soon.
 
 ## Installing Tutum Agent on a node with Docker already installed
 
