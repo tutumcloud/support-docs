@@ -64,13 +64,13 @@ environment:
 
 
 ## links
-Link to another service. Either specify both the service name and the link alias (`SERVICE:ALIAS`), or just the service name (which will also be used for the alias). External services in the stack can be referred by its service name if it is unique or by its service uuid.
+Link to another service. Either specify both the service unique name and the link alias (`SERVICE:ALIAS`), or just the service unique name (which will also be used for the alias). If the target service belongs to this stack its service unique name is its service name. If the target service does not belong to any stack its service unique name is its service name. If the target service belongs to another stack its service unique name is its service name plus the service stack name, separated by ".".
 
 ```
 links:
  - mysql
  - redis:cache
- - c652342c-3cae-4b27-9285-798f0b348631:amqp
+ - amqp.staging:amqp
 ```
 Environment variables will be created for each link that Tutum resolves to the containers IPs of the linked service. More information [here](https://support.tutum.co/support/solutions/articles/5000012181-service-links).
 
@@ -106,12 +106,12 @@ volumes:
 ```
 
 ## volumes_from
-Mount all of the volumes from another service. You can refer other services by name or by uuid if they are external to this stack. Learn more [here](https://tutum.freshdesk.com/support/solutions/articles/5000520731).
+Mount all of the volumes from another service by specifying a service unique name. If the target service belongs to this stack its service unique name is its service name. If the target service does not belong to any stack its service unique name is its service name. If the target service belongs to another stack its service unique name is its service name plus the service stack name, separated by ".". Learn more [here](https://tutum.freshdesk.com/support/solutions/articles/5000520731).
 
 ```
 volumes_from:
  - database
- - c652342c-3cae-4b27-9285-798f0b348631
+ - mongodb.staging
 ```
 
 ## tags
