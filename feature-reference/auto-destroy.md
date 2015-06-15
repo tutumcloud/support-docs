@@ -2,8 +2,7 @@
 
 -   `OFF`: if the container stops, regardless of the exit code, Tutum
     will not terminate it and will leave it in **Stopped** state.
--   `ON_FAILURE`: if the container stops with an exit code different
-    from 0, Tutum will automatically terminate it. Otherwise, it will
+-   `ON_SUCCESS`: if the container stops with an exit code equals to 0, Tutum will automatically terminate it. Otherwise, it will
     leave it in **Stopped** state.
 -   `ALWAYS`: if the container stops, regardless of the exit code,
     Tutum will automatically terminate it.
@@ -79,8 +78,6 @@ Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more info
 ### Using the web interface
 
 You can also activate or deactivate the **Autodestroy** setting to a service
-after it has been deployed from within the service detail page.
+after it has been deployed editing the service.
 
 ![](https://s.tutum.co/support/images/service-autodestroy-enable-disable.gif)
-
-You can click on the **Autodestroy** button to set the feature to `ALWAYS` (ON) or `OFF`.
