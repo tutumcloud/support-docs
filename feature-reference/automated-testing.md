@@ -36,10 +36,11 @@ Testing is performed using our open source [tutum/builder](https://github.com/tu
 
 ### Available environment variables for testing
 
-The following environment variables are available when executing the `docker-compose.test.yml` file:
+The following environment variables are available when executing the `docker-compose.test.yml` file; and during the execution of hooks:
 
 * `GIT_BRANCH` which contains the name of the branch that is currently being tested
 * `GIT_TAG` which contains the commmit hash being tested
+* `GIT_SHA1` which contains the commmit hash of the tag being tested
 * `IMAGE_NAME` which contains the name of the docker repository being built (not defined for automated tests triggered outside of an automated build)
 
 You can use the above environment variables by setting them in your `sut` service:
