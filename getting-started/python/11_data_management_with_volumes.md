@@ -74,7 +74,7 @@ Let's see how you'd go about downloading the `/data` volume from Redis to your l
 First, run a SSH service that mounts the volumes of the redis you want to backup:
 
 ```
-$ tutum service run -n download -p 22:2222 -e AUTHORIZED_KEYS="$(cat ~/.ssh/id_rsa.pub)" --volumes-from redis tutum/ubuntu
+$ tutum service run -n download -p 2222:22 -e AUTHORIZED_KEYS="$(cat ~/.ssh/id_rsa.pub)" --volumes-from redis tutum/ubuntu
 ``` 
 
 Then run **scp** to download the files of the data volume in Redis:

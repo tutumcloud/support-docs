@@ -1,6 +1,6 @@
-**Autoredeploy** is a Tutum feature that when enabled on a service that uses an image stored in Tutum's Registry, will automatically redeploy it whenever a new image is pushed.
+**Autoredeploy** is a Tutum feature that when enabled on a service that uses an image stored in Tutum's Registry, will automatically redeploy it whenever a new image is pushed or built.
 
-**Note:** if you want to autoredeploy your image stored in the Docker Hub, you will need to use [redeploy triggers](https://support.tutum.co/support/solutions/articles/5000513815) instead.
+**Note:** if you want to autoredeploy your image stored in the Docker Hub or another third party registry, you will need to use [redeploy triggers](https://support.tutum.co/support/solutions/articles/5000513815) instead.
 
 
 ## Launching a service with autoredeploy
