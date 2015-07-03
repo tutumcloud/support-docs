@@ -44,7 +44,7 @@ If not provided, it will have a default value of `OFF`. Check our [API documen
 
 At the moment, activating the **Autorestart** setting on the **Service configuration** step of the **Launch new service ** wizard sets the **autorestart** settings to `ALWAYS`.
 
-![](https://s.tutum.co/support/images/service-wizard-crash-recovery.png)
+![](https://s.tutum.co/support/images/autorestart.gif)
 
 The default value is to be *deactivated* which will set the option to `OFF`.
 
@@ -77,5 +77,3 @@ Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more info
 ### Using the web interface
 
 You can also activate or deactivate **Autorestart** to a service after it has been deployed editing the service.
-
-![](https://s.tutum.co/support/images/service-crash-recovery-enable-disable.gif)
