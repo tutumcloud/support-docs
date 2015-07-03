@@ -4,10 +4,9 @@
 - `ON_FAILURE`: if the container stops with an exit code different from 0, it will be autorestarted.
 - `ALWAYS`: if the container stops, regardless of the exit code, it will be autorestarted.
 
-Please note that **Autorestart** is incompatible with **Autodestroy** in the following scenarios:
+Please note that **Autorestart** is incompatible with **Autodestroy** in the following scenario:
 
 - If **Autorestart** is set to `ALWAYS`, **Autodestroy** has to be `OFF`
-- If **Autorestart** is set to `ON_FAILURE`, **Autodestroy** can be `OFF` or `ALWAYS`.
 
 The **Autorestart** feature is implemented using Docker's `--autorestart` flag, so Docker will try to restart the container indefinitely until it succeeds using an incremental back-off algorithm.
 
@@ -45,7 +44,7 @@ If not provided, it will have a default value of `OFF`. Check our [API documen
 
 At the moment, activating the **Autorestart** setting on the **Service configuration** step of the **Launch new service ** wizard sets the **autorestart** settings to `ALWAYS`.
 
-![](https://s.tutum.co/support/images/service-wizard-crash-recovery.png)
+![](https://s.tutum.co/support/images/autorestart.gif)
 
 The default value is to be *deactivated* which will set the option to `OFF`.
 
@@ -77,8 +76,4 @@ Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more info
 
 ### Using the web interface
 
-You can also activate or deactivate **Autorestart** to a service after it has been deployed from within the service detail page.
-
-![](https://s.tutum.co/support/images/service-crash-recovery-enable-disable.gif)
-
-You can click on the **Autorestart** button to turn the feature `ALWAYS` (ON) or `OFF`.
+You can also activate or deactivate **Autorestart** to a service after it has been deployed editing the service.

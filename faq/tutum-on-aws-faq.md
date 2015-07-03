@@ -19,7 +19,7 @@ In order for Tutum to detect these objects after they are created, it's importan
 
 ## Can I modify the tutum-default security group?
 
-You can change the ports opened in the `tutum-default` or `tutum-vpc-default` security groups as long as **ports 22/tcp (ssh), 2375/tcp (docker) and 48001/tcp (metrics)** are open. This is a temporary limitation that will be solved in the future.
+You can change the ports opened in the `tutum-default` or `tutum-vpc-default` security groups as long as **ports 22/tcp (ssh), 2375/tcp (docker), 6783/tcp + 6783/udp (weave) and 48001/tcp (metrics)** are open. This is a temporary limitation that will be solved in the future.
 
 
 ## What happens if I restart a node in the AWS console?
