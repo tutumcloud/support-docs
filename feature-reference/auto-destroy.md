@@ -42,7 +42,7 @@ Activating the **Autodestroy** setting on
 the **Service configuration** step of the **Launch new
 service** wizard sets the autodestroy setting to `ALWAYS`.
 
-![](https://s.tutum.co/support/images/service-wizard-autodestroy.gif)
+![](https://s.tutum.co/support/images/autodestroy.gif)
 
 The default value is to be *deactivated* which will set it to `OFF`.
 
@@ -79,5 +79,3 @@ Check our [API documentation](https://docs.tutum.co/v2/api/?shell) for more info
 
 You can also activate or deactivate the **Autodestroy** setting to a service
 after it has been deployed editing the service.
-
-![](https://s.tutum.co/support/images/service-autodestroy-enable-disable.gif)
