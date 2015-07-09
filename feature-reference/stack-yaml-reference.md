@@ -180,6 +180,20 @@ Whether to start the containers with Docker's `privileged` flag set or not (defa
 privileged: true
 ```
 
+## net
+Networking mode. Only "bridge" and "host" options are supported for now.
+
+```
+net: host
+```
+
+## pid
+Sets the PID mode to the host PID mode. This turns on sharing between container and the host operating system the PID address space. Containers launched with this (optional) flag will be able to access and manipulate other containers in the bare-metal machine’s namespace and vise-versa.
+
+```
+pid: "host"
+```
+
 ## command & entrypoint
 Override the default command or entrypoint defined in the image.
 
@@ -207,7 +221,6 @@ dns_search
 working_dir
 user
 hostname
-net
 domainname
 build
 external_links
