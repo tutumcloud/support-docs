@@ -194,6 +194,13 @@ Sets the PID mode to the host PID mode. This turns on sharing between container 
 pid: "host"
 ```
 
+## working_dir
+Sets the default working directory for running binaries within a containe (default is `/`.
+
+```
+working_dir: "/app"
+```
+
 ## command & entrypoint
 Override the default command or entrypoint defined in the image.
 
@@ -218,7 +225,6 @@ Tutum.yml has been designed with `docker-compose.yml` in mind to maximize compat
 ```
 dns
 dns_search
-working_dir
 user
 hostname
 domainname
