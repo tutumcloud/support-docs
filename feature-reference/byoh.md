@@ -53,6 +53,14 @@ To upgrade `tutum-agent` execute the following command from your BYON host:
 $ apt-get update && apt-get install -y tutum-agent`
 ```
 
+## Restarting Tutum Agent
+
+To restart `tutum-agent` execute the following command from your BYON host:
+
+```
+$ service tutum-agent restart
+```
+
 # Known limitations
 
 ## Firewall requisites
