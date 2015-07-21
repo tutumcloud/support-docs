@@ -134,11 +134,11 @@ target_num_containers: 3
 Whether the containers for this service should be restarted if they stop (default: `no`, possible values: `no`, `on-failure`, `always`).
 
 ```
-autorestart: always
+restart: always
 ```
 
 ## autodestroy
-Whether the containers for this service should be terminated if they stop (default: `off`, possible values: `off`, `on_failure`, `always`).
+Whether the containers for this service should be terminated if they stop (default: `off`, possible values: `off`, `on_success`, `always`).
 
 ```
 autodestroy: always
