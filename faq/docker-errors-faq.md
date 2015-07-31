@@ -149,3 +149,21 @@ N/A
 ## Workaround
 
 Fix the run command on the service.
+
+---
+
+## Error message
+
+*Timeout when pulling image from the registry*
+
+## Description
+
+Pulling the image is taking more than 10 minutes. It can be due to the docker daemon waiting for a nonexistent process pulling the required image.
+
+## GitHub link
+
+[docker/docker#12823](https://github.com/docker/docker/issues/12823)
+
+## Workaround
+
+Restarting the `tutum-agent` service (`sudo service tutum-agent restart`) on the node, or restarting the node, solves the issue.
