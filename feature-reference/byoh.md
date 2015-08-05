@@ -79,7 +79,7 @@ Of course, you will need to open any ports that you are planning to publish in y
 
 **Tutum Agent** has been tested on:
 
-- Ubuntu 13.04, 14.04, 15.04
+- Ubuntu 14.04, 15.04
 - Centos 7
 - Debian 8
 - Fedora 21, 22
