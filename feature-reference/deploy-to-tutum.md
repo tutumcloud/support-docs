@@ -1,4 +1,4 @@
-The **Deploy to Tutum** button allows developers to deploy stacks with one click in Tutum. The button is intended to be added to `README.md` files in public GitHub or DockerHub repositories, although it can be used anywhere.
+The **Deploy to Tutum** button allows developers to deploy stacks with one click in Tutum. The button is intended to be added to `README.md` files in public GitHub repositories, although it can be used anywhere else.
 
 This is an example button to deploy our [python quickstart](https://github.com/tutumcloud/quickstart-python):
 
@@ -21,11 +21,10 @@ You can simply add the following snipet to your `README.md` file:
 
 Tutum will detect the HTTP referer header and deploy the stack file found in the repository, branch and relative path where the source `README.md` file is stored.
 
+
 ## Adding the 'Deploy to Tutum' button in DockerHub
 
-If your repository has automated builds enabled from a GitHub repository and you added the button to the `README` file, the button on the description (which will be a copy of the one in your `README` file) will work automatically with no changes. The stack definition will be fetched from the source repository (using the default branch and looking in the root path).
-
-If your repository is not an automated build, or your stack definition is in a different branch and/or path, you can edit the description and add the following code:
+If the button is displayed on the DockerHub, Tutum cannot automatically detect the source GitHub repository, branch and path. In this case, edit the repository description and add the following code:
 
 	[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/?repo=<repo_url>)
 
