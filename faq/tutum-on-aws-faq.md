@@ -30,7 +30,6 @@ After the node boots up, Tutum Agent will try contact our API and register itsel
 
 Yes, you can, but you will need to restart the Tutum Agent (or the host) for the changes to take effect in Tutum.
 
-
 ## Can I terminate a node from the AWS console?
 
 If you created the node using Tutum and you terminate it in the AWS console, all data in that node will be destroyed, as the volume attached to it is set to destroy on node termination. If you haven't revoked your Tutum IAM user, we will detect the termination and will mark the node as `Terminated` on Tutum.
