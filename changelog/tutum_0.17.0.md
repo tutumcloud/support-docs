@@ -2,7 +2,7 @@
 
 ## Added 
 
-- **[Packet](http://packet.net)** is now a supported infrastructure provider in Tutum. Packet offers a premium bare metal cloud designed for performance. Sign up using promo code **TUTUM100** for a $100.00 credit. With the addition of Packet, Tutum now provides native integration with 5 top IaaS providers, and more coming soon :) 
+- **[Packet](http://packet.net)** is now a supported infrastructure provider in Tutum. Packet offers a premium bare metal cloud designed for performance. [Sign up](https://app.packet.net/#/registration) using promo code **TUTUM100** for a $100.00 credit. With the addition of Packet, Tutum now provides native integration with 5 top IaaS providers, and more coming soon :) 
  
 - **Stack name now shown in service list view** to help you figure out which service is which. More updates to help the organization of all your services and stacks are in the pipeline, so stay tuned! 
 
