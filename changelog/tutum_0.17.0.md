@@ -25,7 +25,7 @@
 
 - **Docker 1.7.1 upgrade** – after some [issues with Docker 1.6](http://blog.tutum.co/2015/07/28/docker-engine-in-tutum-a-tale-of-three-versions/) we are now back in full force with Docker 1.7.1. This update resolves most, if not all, memory leakage issues that you may have experienced to date. It also comes with many other fixes and enhancements. Click here to get the entire scoop for [Docker 1.7.0](https://github.com/docker/docker/blob/master/CHANGELOG.md#170-2015-06-16) and [Docker 1.7.1](https://github.com/docker/docker/blob/master/CHANGELOG.md#171-2015-07-14). You can upgrade all nodes simultaneously or individually. Please note that the overlay network will not work between nodes running 1.5.0 and 1.7.1. All new nodes will be provisioned using version 1.7.1.
 
-  ![]()
+  ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.17.0/0.17.0.png)
 
 - **Overlay network upgrade** to Weave 1.0.1 (latest estable) is bundled with the Docker 1.7.1 node upgrade. Find out what's new in the changelog for [Weave 1.0.0](https://github.com/weaveworks/weave/releases/tag/v1.0.0) and [Weave 1.0.1](https://github.com/weaveworks/weave/releases/tag/v1.0.1).
 
