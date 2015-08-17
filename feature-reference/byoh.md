@@ -50,7 +50,7 @@ $ apt-get remove tutum-agent
 To upgrade `tutum-agent` execute the following command from your BYON host:
 
 ```
-$ apt-get update && apt-get install -y tutum-agent`
+$ apt-get update && apt-get install -y tutum-agent
 ```
 
 ## Restarting Tutum Agent
