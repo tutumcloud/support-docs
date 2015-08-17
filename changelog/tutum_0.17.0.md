@@ -18,7 +18,7 @@
 
   ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.17.0/tag_list.png)
 
-- `working_dir`, `pid`, and `net` support in Stackfiles. More info [here](https://tutum.freshdesk.com/support/solutions/articles/5000583471)
+- The Docker compose keys `working_dir`, `pid`, and `net` are now supported in Stackfiles. More info [here](https://tutum.freshdesk.com/support/solutions/articles/5000583471)
 
 - **BYON (bring-your-own-node) support for Red Hat Enterprise Linux 7:** - with this update Tutum now officially supports BYON running Ubuntu 14.04 & 15.04, CentOS 7, Fedora 21 & 22, Debian 8, and Red Hat Enterprise Linux 7. Stay tuned, more coming soon. More info [here](https://github.com/tutumcloud/tutum-agent)
 
