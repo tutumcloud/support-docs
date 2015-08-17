@@ -1,4 +1,4 @@
-# Tutum 0.16.0
+# Tutum 0.17.0
 
 ## Added 
 
