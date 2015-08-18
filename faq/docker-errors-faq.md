@@ -1,6 +1,24 @@
 This is a list of known issues with current versions of docker along with our recommended workaround. You might encounter these errors in Tutum.
 
 
+## Error message
+
+*404 Client Error: Not Found ("Cannot start container \<id>: adding interface \<interface_name> to bridge docker0 failed: could not find bridge docker0: no such network interface")*
+
+## Description
+
+When using Docker 1.7.1, some containers cannot be started with the above error. It seems to be a libnetwork issue that has been solved in Docker 1.8.0.
+
+## GitHub link
+
+[docker/docker#14738](https://github.com/docker/docker/issues/14738)
+
+## Workaround
+
+Restarting the node seems to alleviate the issue.
+
+---
+
 ## Error message
 
 *500 Server Error: Internal Server Error ("Cannot start container <id>: fork/exec /var/lib/docker/init/dockerinit-1.5.0: cannot allocate memory")*
@@ -19,7 +37,7 @@ Your host has not enough free memory for docker to perform the required operatio
 
 ## Workaround
 
-Restart the `tutum-agent` service (`sudo service tutum-agent restart`) on the node, or restart the node.
+Restart the `tutum-agent` service (`sudo service tutum-agent restart`) on the node, or restart the node. Upgrading to Docker 1.7.1+ solves the issue.
 
 ---
 
