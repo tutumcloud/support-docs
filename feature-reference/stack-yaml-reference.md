@@ -138,7 +138,7 @@ restart: always
 ```
 
 ## autodestroy
-Whether the containers for this service should be terminated if they stop (default: `off`, possible values: `off`, `on_success`, `always`).
+Whether the containers for this service should be terminated if they stop (default: `no`, possible values: `no`, `on-success`, `always`).
 
 ```
 autodestroy: always
