@@ -2,7 +2,7 @@
 
 ## Added 
 
-- **A new on-boarding experience** is now a available to new (and existing) users. Activate it by clickin on your picture on the top right corner, and then on "Welcome tour". 
+- **A new on-boarding experience** is now a available to new (and existing) users. Activate it by clicking on your picture in the top right corner, and then on "Welcome tour". 
 
   ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.18.0/onboarding.png)
 
@@ -12,7 +12,7 @@
 
   ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.18.0/aws-integrations.png)
 
-- **Autobuild UI checkbox** because auto isn't always the desired behaviour.
+- **Autobuild UI checkbox** because autobuild isn't always the desired behaviour.
 
   ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.18.0/autobuild.png)
 
@@ -26,8 +26,8 @@
 
 - **Multiple enhancements and fixes to Tutum Agent** for all those pesky issues you've told us about. [Learn more](https://github.com/tutumcloud/tutum-agent)
 
-- **Better error handling/messages throughout the app.** Nobody likes meaningless error messages that leave you clueless when something fails. We've gone back and improved these to be sweet and meaningful. 
+- **Better error handling/messages throughout the app.** Nobody likes meaningless error messages that leave you clueless when something fails. We've gone through and improved them to be sweet and meaningful. 
 
 - **Speed enhancements** for faster service deploying, scaling, stopping, and terminating. We're gettings things ready for GA afterall ;)
 
-- **Stability optimizations** to minimize the number of failed actions and to increase consistency in the quality of service throughout the application and to all users. Yes, yes, yes, GA is coming. 
+- **Stability optimizations** to minimize the number of failed actions and to increase consistency in the quality of service throughout the application for all users. Yes, yes, yes, GA is coming. 
