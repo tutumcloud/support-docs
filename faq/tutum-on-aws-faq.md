@@ -53,17 +53,17 @@ As part of the deprecation of Classic platform, users have now the ability to ch
 In the launch node cluster view, you can choose:
 
 - VPC dropdown:
-    1. AUTO -> Delegates to Tutum the creation of the VPC.
-    2. AUTO (tutum-vpc) -> Tutum's default VPC is already created, will use it for the deployments.
-    3. "vpc-XXXX" -> You can select one of the VPCs already created by you.
+    1. AUTO - Delegates to Tutum the creation of the VPC.
+    2. "vpc-XXXX" (tutum-vpc) - Tutum's default VPC. It will be present if you have already deployed nodes to that region. Note that you can choose subnets and security groups with it. See `Which objects does Tutum create in my EC2 account` for detailed info.
+    3. "vpc-XXXX" - You can select one of the VPCs already created by you. If you tag name them, it will be displayed too.
 - Subnets dropdown:
-	1. AUTO -> Delegates to Tutum the management of the subnets. Will create them if they do not exist or will use the ones tagged with `tutum-subnet`.
+	1. AUTO - Delegates to Tutum the management of the subnets. Will create them if they do not exist or will use the ones tagged with `tutum-subnet`.
 	2. Multiple selection of existing subnets. See `How does Tutum balance my nodes among different availability zones?` section for detailed info.
 - Security groups dropdown:
 	1. AUTO
 	2. Multiple selection of existing security groups.
 - Instance profiles dropdown:
-	1. None -> Tutum does not apply any instance profiles to the node.
+	1. None - Tutum does not apply any instance profiles to the node.
 	2. "my_instance_profile_name"
 
 ## How can I customize VPC/IAM elements in Tutum through API?
