@@ -138,7 +138,7 @@ restart: always
 ```
 
 ## autodestroy
-Whether the containers for this service should be terminated if they stop (default: `off`, possible values: `off`, `on_success`, `always`).
+Whether the containers for this service should be terminated if they stop (default: `no`, possible values: `no`, `on-success`, `always`).
 
 ```
 autodestroy: always
@@ -178,6 +178,13 @@ Whether to start the containers with Docker's `privileged` flag set or not (defa
 
 ```
 privileged: true
+```
+
+## reuse_volumes
+Whether to reuse existing volumes or not when redeploying containers (default: `true`).
+
+```
+reuse_volumes: false
 ```
 
 ## net
