@@ -24,7 +24,7 @@
 
 ## Fixed
 
-- **Multiplee nhancements and fixes to Tutum Agent** for all those pesky issues you've told us about. [Learn more](https://github.com/tutumcloud/tutum-agent)
+- **Multiple enhancements and fixes to Tutum Agent** for all those pesky issues you've told us about. [Learn more](https://github.com/tutumcloud/tutum-agent)
 
 - **Better error handling/messages throughout the app.** Nobody likes meaningless error messages that leave you clueless when something fails. We've gone back and improved these to be sweet and meaningful. 
 
