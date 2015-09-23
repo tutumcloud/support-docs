@@ -20,6 +20,8 @@
 
 ## Changed/Updated
 
+- **New Nodes** are deployed with Weave version 1.0.3.
+
 - **Deprecate EC2 Classic** in favor of our new tight AWS integration with node cluster provisioning. [Learn more](https://support.tutum.co/support/solutions/articles/5000526971-tutum-on-aws-faq)
 
 ## Fixed
