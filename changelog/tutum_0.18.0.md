@@ -16,7 +16,7 @@
 
   ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.18.0/autobuild.png)
 
-- **Build concurrency** on your nodes can now be controlled. Simply add a "tag" to your node in the format `build=N` where N is the maximum number of parallel builds for that node, and Tutum will handle the rest. [Learn more](https://support.tutum.co/support/solutions/articles/5000638474-automated-builds)
+- **Build concurrency** on your nodes can now be controlled. Simply add a "tag" to your node in the format `builder=N` where N is the maximum number of parallel builds for that node, and Tutum will handle the rest. [Learn more](https://support.tutum.co/support/solutions/articles/5000638474-automated-builds)
 
   ![](http://s.tutum.co.s3.amazonaws.com/changelog/0.18.0/build_parallel.png)
 
