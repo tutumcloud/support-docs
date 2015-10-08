@@ -180,13 +180,6 @@ Whether to start the containers with Docker's `privileged` flag set or not (defa
 privileged: true
 ```
 
-## reuse_volumes
-Whether to reuse existing volumes or not when redeploying containers (default: `true`).
-
-```
-reuse_volumes: false
-```
-
 ## net
 Networking mode. Only "bridge" and "host" options are supported for now.
 

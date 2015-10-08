@@ -1,6 +1,6 @@
 ## Overview 
 
-You can register your [Packet](https://www.packet.net) account credentials in your Tutum account to deploy **nodes** and **node clusters** using Tutum's Dashboard/API/CLI. Your Packet API key is required in order to have Tutum interact with Packet on your behalf to create and manage your **nodes** (Packet devices).
+You can register your [Packet](https://www.packet.net/promo/tutum/) account credentials in your Tutum account to deploy **nodes** and **node clusters** using Tutum's Dashboard/API/CLI. Your Packet API key is required in order to have Tutum interact with Packet on your behalf to create and manage your **nodes** (Packet devices).
 
 ## Add Packet credentials
 
