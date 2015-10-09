@@ -12,14 +12,8 @@ You'll be presented with the following screen:
 
 ![](https://s.tutum.co/support/images/azure-link-modal.png)
 
-First, click on **Download management certificate** to download the public certificate generated for your Tutum account. Then, go to the **Azure Portal \> Subscriptions (top right corner) \> Manage subscriptions/directory**:
-
+First, click on **Download management certificate** to download the public certificate generated for your Tutum account. Then, go to the **Azure Portal \> Settings (botton left corner) \> Management certificates tab \> ** and click on the **Upload** button on the bottom of the screen:
 ![](https://s.tutum.co/support/images/azure-portal-subscriptions.png)
-
-Now click on the **Management certificates** tabs, and click on the **Upload** button on the bottom of the screen:
-
-![](https://s.tutum.co/support/images/azure-management-certificates.png)
-
 
 In the **Upload a management certificate** dialog shown, select the previously downloaded certificate in the **File** field, and select the subscription that you want to use with Tutum:
 
