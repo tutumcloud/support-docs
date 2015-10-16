@@ -195,7 +195,7 @@ pid: "host"
 ```
 
 ## working_dir
-Sets the default working directory for running binaries within a containe (default is `/`.
+Sets the default working directory for running binaries within a container (default is `/`).
 
 ```
 working_dir: "/app"
