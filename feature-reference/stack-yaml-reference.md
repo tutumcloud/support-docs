@@ -42,6 +42,13 @@ image: REGISTRY/NAMESPACE/IMAGE_NAME:TAG
 image: tutum.co/borja/hello:latest
 ```
 
+## command
+Override the default command in the image.
+
+```
+command: echo 'Hello World!'
+```
+
 ## environment
 A list of environment variables to be added in the service containers on launch (overriding any image-defined environment variables). You can use either an array or a dictionary.
 
@@ -191,11 +198,53 @@ Sets the PID mode to the host PID mode. This turns on sharing between container 
 pid: "host"
 ```
 
-## command
-Override the default command in the image.
+##dns
+Custom DNS servers. Can be a single value or a list.
 
 ```
-command: echo 'Hello World!'
+dns: 8.8.8.8
+dns:
+  - 8.8.8.8
+  - 9.9.9.9
+```
+
+##dns_search
+Custom DNS search domains. Can be a single value or a list.
+
+```
+dns_search: example.com
+dns_search:
+  - dc1.example.com
+  - dc2.example.com
+```
+
+## cap_add, cap_drop
+Add or drop container capabilities. See `man 7 capabilities for a full list.
+
+```
+cap_add:
+  - ALL
+
+cap_drop:
+  - NET_ADMIN
+  - SYS_ADMIN
+```
+
+## devices
+List of device mappings. Uses the same format as the `--device docker client create option.
+
+```
+devices:
+  - "/dev/ttyUSB0:/dev/ttyUSB0"
+```
+
+## security_opt
+Override the default labeling scheme for each container.
+
+```
+security_opt:
+  - label:user:USER
+  - label:role:ROLE
 ```
 
 ## Single value keys analogous to its `docker run` counterpart
@@ -221,11 +270,7 @@ tty: true
 Tutum.yml has been designed with `docker-compose.yml` in mind to maximize compatibility, but the following keys are not supported: 
 
 ```
-dns
-dns_search
 build
 external_links
 env_file
-cap_add
-cap_drop
 ```
