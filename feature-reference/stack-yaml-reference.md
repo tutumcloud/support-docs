@@ -173,9 +173,6 @@ Whether to redeploy the containers of the service when its image is updated in T
 autoredeploy: true
 ```
 
-## privileged
-Whether to start the containers with Docker's `privileged` flag set or not (default: `false`).
-
 ```
 privileged: true
 ```
@@ -194,27 +191,28 @@ Sets the PID mode to the host PID mode. This turns on sharing between container 
 pid: "host"
 ```
 
-## working_dir
-Sets the default working directory for running binaries within a containe (default is `/`.
-
-```
-working_dir: "/app"
-```
-
-## command & entrypoint
-Override the default command or entrypoint defined in the image.
+## command
+Override the default command in the image.
 
 ```
 command: echo 'Hello World!'
-entrypoint: echo 'Hi World!'
 ```
 
-## cpu_shares & mem_limit
-The relative CPU priority and the memory limit of the created containers. See the [Runtime Constraints on CPU and Memory](https://docs.docker.com/reference/run/#runtime-constraints-on-cpu-and-memory) to learn more.
-
+## Single value keys analogous to its `docker run` counterpart
 ```
+working_dir: /app
+entrypoint: /app/entrypoint.sh
+user: root
+
+hostname: foo
+domainname: foo.com
+
 cpu_shares: 512
 mem_limit: 100000m
+privileged: true
+
+stdin_open: true
+tty: true
 ```
 
 
@@ -225,14 +223,9 @@ Tutum.yml has been designed with `docker-compose.yml` in mind to maximize compat
 ```
 dns
 dns_search
-user
-hostname
-domainname
 build
 external_links
 env_file
 cap_add
 cap_drop
-stdin_open
-tty
 ```
