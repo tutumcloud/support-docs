@@ -224,7 +224,6 @@ Add or drop container capabilities. See `man 7 capabilities for a full list.
 ```
 cap_add:
   - ALL
-
 cap_drop:
   - NET_ADMIN
   - SYS_ADMIN
@@ -252,14 +251,11 @@ security_opt:
 working_dir: /app
 entrypoint: /app/entrypoint.sh
 user: root
-
 hostname: foo
 domainname: foo.com
-
 cpu_shares: 512
 mem_limit: 100000m
 privileged: true
-
 stdin_open: true
 tty: true
 ```
