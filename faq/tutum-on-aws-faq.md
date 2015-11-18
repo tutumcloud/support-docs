@@ -1,12 +1,12 @@
 # Tutum on AWS
 
-## My accound does not link. How do I troubleshoot it?
+## My account does not link. How do I troubleshoot it?
 
-To validate your AWS Security Credentials, Tutum tries to dry-run an instance on every region. Credentials will be valid if the operation succeedes at least in one of the regions. If you get the following message `Invalid AWS credentials or insufficient EC2 permissions` follow these steps to troubleshoot it:
+To validate your AWS Security Credentials, Tutum tries to dry-run an instance on every region. Credentials will be valid if the operation succeeds at least in one of the regions. If you get the following message `Invalid AWS credentials or insufficient EC2 permissions` follow these steps to troubleshoot it:
 
 1. [Download AWS CLI](https://aws.amazon.com/cli/) and [configure it](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) with your Security Credentials.
 2. Run the following command:
- 
+
         aws ec2 run-instances --dry-run --image-id ami-4d883350 --instance-type m3.medium
 
 This will try to dry-run an Ubuntu 14.04 LTS 64-bit in `sa-east-1` (Sao Paulo, South America). You can look for the AMI in the region you want to deploy to [here](http://cloud-images.ubuntu.com/locator/ec2/). It should show you the error message. If everything is ok, you will see the following message:
@@ -25,7 +25,7 @@ EC2-VPC | The original release of Amazon VPC | Your instances run in a virtual p
 Quoting the same documentation:
 
     Your account may support both the EC2-VPC and EC2-Classic platforms, on a region-by-region basis. If you created your account after 2013-12-04, it supports EC2-VPC only. To find out which platforms your account supports, see Supported Platforms. If your accounts supports EC2-VPC only, we create a default VPC for you. A default VPC is a VPC that is already configured and ready for you to use. [...]
-    
+
 Tutum wanted to maintain compatibility with both platforms, so the steps to deploy a managed instance launched by Tutum were:
 
 1. Create an SSH keypair named `tutum-<uuid>`.
@@ -35,7 +35,7 @@ Tutum wanted to maintain compatibility with both platforms, so the steps to depl
 
 Amazon does the following: in order to add a compatibility layer between Classic and VPC, for those accounts that only support VPC platform when you deploy an instance in Classic mode, it detects that your account does not support it but it does not complain. It will place it in the default VPC (with a default subnet) created in the region for you. So according to Tutum's behaviour, if your account only supports VPC, all your nodes get deployed in Amazon's default VPC.
 
-In Tutum we believe VPC platform presents more benefits for the user than Classic, so we have decided to deprecate the deployment to Classic in favour of VPC. How does if affect to the deployments? there is no Classic step (#1), not anymore. Tutum will always look for a VPC tagged `tutum-vpc`. This way we provide a new level of customization: you are now able to define your own VPC in AWS portal, name it as `tutum-vpc` and deploy a node cluster in the region the VPC was created. Tutum will find it and use it! The rest of elements that Tutum needs for the deployment are also customizables. You can check their tag names in the following section.
+In Tutum we believe VPC platform presents more benefits for the user than Classic, so we have decided to deprecate the deployment to Classic in favour of VPC. How does if affect to the deployments? there is no Classic step (#1), not anymore. Tutum will always look for a VPC tagged `tutum-vpc`. This way we provide a new level of customization: you are now able to define your own VPC in AWS portal, name it as `tutum-vpc` and deploy a node cluster in the region the VPC was created. Tutum will find it and use it! The rest of elements that Tutum needs for the deployment are also customizable. You can check their tag names in the following section.
 
 ## Which objects does Tutum create in my EC2 account?
 
@@ -46,7 +46,7 @@ If you decide to let Tutum create the needed elements for you, these are the det
 - An internet gateway named `tutum-gateway` attached to the VPC.
 - A route table name `tutum-route-table` in the VPC, associating the subnet with the gateway.
 
-As part of the deprecation of Classic platform, users have now the ability to choose any of the elements explained above throught the API or the dashboard:
+As part of the deprecation of Classic platform, users have now the ability to choose any of the elements explained above through the API or the dashboard:
 
 ## How can I customize VPC/IAM elements in Tutum through dashboard?
 
@@ -85,14 +85,14 @@ Add the following section to your body parameters:
 
 ## How does Tutum balance my nodes among different availability zones? (high availability schema)
 
-By default, Tutum will try to deploy your node cluster following an strategy of high availability. This means it will place every instance one by one in the less populated availability zone, for that node cluster. We can see this behaviour with some examples:
+By default, Tutum will try to deploy your node cluster following an strategy of high availability. This means it will place every instance one by one in the less populated availability zone, for that node cluster. We can see this behavior with some examples:
 
 ### We allow Tutum to manage VPC/subnets
 
 Supose is the first time we deploy a node cluster with Tutum in a region, say Sao Paulo (South America, `sa-east-1`) and we delegate to Tutum the management of the deployment. Using the API, we do not sent any `provider_options`. Using the dashboard, we left VPC/subnet/security groups/IAM role values by default. Tutum will:
 
 1. Look for a VPC called `tutum-vpc`. As it is our first time, it does not exist and will create it. Will create a `tutum-gateway` and will attach it to the VPC.
-2. Retrieve all subnets in the VPC. As it is new, there are no subnets so it will create them. For every availability zone (AZ), Tutum will split the VPC CIDR IP space in (# of AZs + 1) blocks and will try to create (# of AZs) subnets (remember we left space for custom subnets). For every subnet, Tutum will try to dry-run an instance of the selected type and will create it if the operation succeedes, creating and associating a `tutum-route-table` to the subnet.
+2. Retrieve all subnets in the VPC. As it is new, there are no subnets so it will create them. For every availability zone (AZ), Tutum will split the VPC CIDR IP space in (# of AZs + 1) blocks and will try to create (# of AZs) subnets (remember we left space for custom subnets). For every subnet, Tutum will try to dry-run an instance of the selected type and will create it if the operation succeeds, creating and associating a `tutum-route-table` to the subnet.
 3. Once all subnets are created (note that there can be less subnets than AZs due to failures when dry-running the instances), Tutum will deploy every node of the cluster following a round-robin algorithm.
 
 ### Scaling a node cluster
@@ -106,7 +106,7 @@ Following the example described in the previous section, we have our node cluste
 
 ### We choose where to deploy
 
-Supose we have another VPC for other purposes, with its components already created, and we want to deploy a node cluster in that VPC. Tutum will:
+Suppose we have another VPC for other purposes, with its components already created, and we want to deploy a node cluster in that VPC. Tutum will:
 
 1. Look for the selected VPC. Found!
 2. Look for selected subnets. If you do not select any subnets, Tutum will try to create them following the rules previously described.
