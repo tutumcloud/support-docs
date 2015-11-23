@@ -219,7 +219,7 @@ dns_search:
 ```
 
 ## cap_add, cap_drop
-Add or drop container capabilities. See `man 7 capabilities for a full list.
+Add or drop container capabilities. See `man 7 capabilities` for a full list.
 
 ```
 cap_add:
@@ -230,11 +230,20 @@ cap_drop:
 ```
 
 ## devices
-List of device mappings. Uses the same format as the `--device docker client create option.
+List of device mappings. Uses the same format as the `--device` docker client create option.
 
 ```
 devices:
   - "/dev/ttyUSB0:/dev/ttyUSB0"
+```
+
+## extra_hosts
+Add hostname mappings. Use the same values as the docker client `--add-host` parameter.
+
+```
+extra_hosts:
+  - "somehost:162.242.195.82"
+  - "otherhost:50.31.209.229"
 ```
 
 ## security_opt
