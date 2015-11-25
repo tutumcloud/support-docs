@@ -22,6 +22,9 @@ A service with an `EVERY_NODE` strategy will have one container deployed **on ea
 * If the service uses volumes, each container on each node will have a different volume.
 * If the service is linked from another service with `EVERY_NODE` strategy, containers will be linked one-to-one on each node.
 
+Please note that because of the different implementation of links when using the **every node** strategy, it's not currently possible to change from **every node** to **high availability** or **emptiest node** and vice versa.
+
+
 
 ## Planned strategies
 
