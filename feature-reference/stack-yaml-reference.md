@@ -293,6 +293,7 @@ mac_address: 02:42:ac:11:65:43
 cpu_shares: 512
 cpuset: 0,1
 mem_limit: 100000m
+memswap_limit: 200000m
 privileged: true
 read_only: true
 stdin_open: true
