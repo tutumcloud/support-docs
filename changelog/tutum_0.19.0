@@ -10,7 +10,7 @@
 
 ## Changed/Updated
 
-- **Tutum CLI:** new shinny version 0.20.2 available. Older versions of the CLI are not compatible with the new *Secure API Keys*, please make sure to update the CLI if you're experiencing problems logging in.
+- **Tutum CLI:** new shinny version 0.21 available. **PLease note** that CLI version older than 0.20.2 are not compatible with the new *Secure API Keys*, please make sure to update the CLI, failure to do so may prevent you from logging and/or interacting with Tutum usin the CLI. 
 
 - **Overlay network:** we've updated our overlay network to [weave 1.3.1](https://github.com/weaveworks/weave/blob/master/CHANGELOG.md#release-131)
 
