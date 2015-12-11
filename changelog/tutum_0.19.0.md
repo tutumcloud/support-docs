@@ -22,4 +22,4 @@
 
 - Fixed a bug that prevented you from editing a service when the image tag no longer existed. Thanks to everyone who pointed out this issue!
 
-- More than 100 minor fixes and improvements in performance, stability and security as we ready up for GA in Q1 2016! Tip: it's time to start getting excited :)
+- More than 100 minor fixes and improvements in performance, stability and security as we ready up for GA in Q1 2016! Hint: it's time to start getting excited :)
