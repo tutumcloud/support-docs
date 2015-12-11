@@ -14,12 +14,10 @@
 
 ## Changed/Updated
 
-- **Tutum CLI:** new and shiny version 0.21.0 available. **Please note** that CLI versions older than 0.20.2 are not compatible with the new *Secure API Keys*, please make sure to update the CLI; failure to do so may prevent you from logging and/or interacting with Tutum using the CLI.
+- **Tutum CLI:** new and shiny version 0.21.0 available. **Please note** that CLI versions older than 0.20.2 are not compatible with the new *Secure API Keys*, please make sure to [update the CLI](https://support.tutum.co/support/solutions/articles/5000049209-installing-the-command-line-interface-tool); failure to do so may prevent you from logging and/or interacting with Tutum using the CLI.
 
 - **Overlay network:** we've updated our overlay network to [weave 1.3.1](https://github.com/weaveworks/weave/blob/master/CHANGELOG.md#release-131).
 
 ## Fixed
-
-- Fixed a bug that prevented you from editing a service when the image tag no longer existed. Thanks to everyone who pointed out this issue!
 
 - More than 100 minor fixes and improvements in performance, stability and security as we ready up for GA in Q1 2016! Hint: it's time to start getting excited :)
