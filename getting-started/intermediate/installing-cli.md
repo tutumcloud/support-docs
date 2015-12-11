@@ -17,7 +17,8 @@ $ pip install tutum
 <span style="">Check that it has installed correctly:</span>
 
 ```
-$ tutum -v tutum 0.10.0.1 
+$ tutum -v 
+tutum 0.21.0 
 ```
 
 ### Mac OS X
