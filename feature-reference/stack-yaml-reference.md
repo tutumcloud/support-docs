@@ -69,6 +69,22 @@ environment:
   - PASSWORD
 ```
 
+## labels
+Add metadata to containers using Docker labels. You can use either an array or a dictionary.
+
+It’s recommended that you use reverse-DNS notation to prevent your labels from conflicting with those used by other software.
+
+```
+labels:
+  com.example.description: "Accounting webapp"
+  com.example.department: "Finance"
+  com.example.label-with-empty-value: ""
+
+labels:
+  - "com.example.description=Accounting webapp"
+  - "com.example.department=Finance"
+  - "com.example.label-with-empty-value"
+```
 
 ## links
 Link to another service. Either specify both the service unique name and the link alias (`SERVICE:ALIAS`), or just the service unique name (which will also be used for the alias). If the target service belongs to this stack its service unique name is its service name. If the target service does not belong to any stack its service unique name is its service name. If the target service belongs to another stack its service unique name is its service name plus the service stack name, separated by ".".
@@ -180,6 +196,10 @@ Whether to redeploy the containers of the service when its image is updated in T
 autoredeploy: true
 ```
 
+## privileged
+
+Whether to start the containers with Docker's privileged flag set or not (default: false).
+
 ```
 privileged: true
 ```
@@ -219,23 +239,31 @@ dns_search:
 ```
 
 ## cap_add, cap_drop
-Add or drop container capabilities. See `man 7 capabilities for a full list.
+Add or drop container capabilities. See `man 7 capabilities` for a full list.
 
 ```
 cap_add:
   - ALL
-
 cap_drop:
   - NET_ADMIN
   - SYS_ADMIN
 ```
 
 ## devices
-List of device mappings. Uses the same format as the `--device docker client create option.
+List of device mappings. Uses the same format as the `--device` docker client create option.
 
 ```
 devices:
   - "/dev/ttyUSB0:/dev/ttyUSB0"
+```
+
+## extra_hosts
+Add hostname mappings. Use the same values as the docker client `--add-host` parameter.
+
+```
+extra_hosts:
+  - "somehost:162.242.195.82"
+  - "otherhost:50.31.209.229"
 ```
 
 ## security_opt
@@ -247,19 +275,27 @@ security_opt:
   - label:role:ROLE
 ```
 
+## cgroup_parent
+Specify an optional parent cgroup for the container.
+
+```
+cgroup_parent: m-executor-abcd
+```
+
 ## Single value keys analogous to its `docker run` counterpart
 ```
 working_dir: /app
 entrypoint: /app/entrypoint.sh
 user: root
-
 hostname: foo
 domainname: foo.com
-
+mac_address: 02:42:ac:11:65:43
 cpu_shares: 512
+cpuset: 0,1
 mem_limit: 100000m
+memswap_limit: 200000m
 privileged: true
-
+read_only: true
 stdin_open: true
 tty: true
 ```

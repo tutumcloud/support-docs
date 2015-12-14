@@ -13,6 +13,10 @@ This will try to dry-run an Ubuntu 14.04 LTS 64-bit in `sa-east-1` (Sao Paulo, S
 
     A client error (DryRunOperation) occurred when calling the RunInstances operation: Request would have succeeded, but DryRun flag is set.
 
+## "AWS returned an error: unauthorized operation" using instance profiles to deploy node clusters
+
+Please note that you cannot use an instance profile that has more permissions than the IAM user you are using with Tutum. If you do that, you will get an "unauthorized operation" error. You can solve it adding `"Action":"iam:PassRole"` permission to the policy of the IAM user you are using with Tutum. You can read more about this [here](http://blogs.aws.amazon.com/security/post/Tx3M0IFB5XBOCQX/Granting-Permission-to-Launch-EC2-Instances-with-IAM-Roles-PassRole-Permission)
+
 ## What is the difference between EC2-Classic & EC2-VPC?
 
 According to [Amazon EC2 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) there are two supported platforms to deploy your instances:
