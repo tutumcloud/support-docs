@@ -64,7 +64,7 @@ provided for **Policy Document**.
 
 `iam:ListInstanceProfiles` allows the user to retrieve instance profiles to apply to your nodes.
 
-**NOTE**: if you plan to use instance roles with your Tutum nodes, make sure that your Tutum user does not pass a role to an EC2 instance where the role has more permissions than you want the user to have. If you do that, you will get an `AWS returned an error: unauthorized operation. Please check that the AWS credentials you have provided have enough permissions`. You can solve this adding `"Action":"iam:PassRole"` permission to your Tutum user policy. You can read more about this [here.](http://blogs.aws.amazon.com/security/post/Tx3M0IFB5XBOCQX/Granting-Permission-to-Launch-EC2-Instances-with-IAM-Roles-PassRole-Permission)
+**NOTE**: Please note that you cannot use an instance profile that has more permissions than the IAM user you are using with Tutum. If you do that, you will get an "unauthorized operation" error. You can solve it adding `"Action":"iam:PassRole"` permission to the policy of the IAM user you are using with Tutum. You can read more about this [here](http://blogs.aws.amazon.com/security/post/Tx3M0IFB5XBOCQX/Granting-Permission-to-Launch-EC2-Instances-with-IAM-Roles-PassRole-Permission)
 
 If you want to limit Tutum to a specific EC2 Region, you can use the following policy instead (i.e. `us-west-2` US West (Oregon)):
 
