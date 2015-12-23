@@ -18,4 +18,4 @@
   - The overlay network will now prioritize using private IPs over public IPs when two nodes belong to the same private network. 
   - If these nodes are on the same VPC (Virtual Private Cloud) in AWS, the overlay network will make use of weave's new [_fast data path_](http://blog.weave.works/2015/11/13/weave-docker-networking-performance-fast-data-path/) to deliver network performance close to standard networking.
   
-  *To take advantage of this new feature, please upgrade existing nodes to 1.9.1-cs2 or re-deploy your containers to new nodes running 1.9.1-cs2.*
+  *To take advantage of this new feature, please upgrade existing nodes to Docker 1.9.1-cs2 or re-deploy your containers to new nodes running Docker 1.9.1-cs2.*
