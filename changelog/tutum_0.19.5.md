@@ -14,8 +14,12 @@
   
   *Please be aware that performing a Docker Upgrade will momentarily stop your containers while the docker daemon is being updated.* 
 
-- **Private networking:** Why are my containers using my nodes' public IPs if all of my nodes are in the same private network? You asked, and we heard you loud and clear. With this release we've improved how the container overlay network is configured:
+- **Private networking:** why are my containers using my nodes' public IPs if all of my nodes are in the same private network? You asked, and we heard you loud and clear. With this release we've improved how the container overlay network is configured:
   - The overlay network will now prioritize using private IPs over public IPs when two nodes belong to the same private network. 
   - If these nodes are on the same VPC (Virtual Private Cloud) in AWS, the overlay network will make use of weave's new [_fast data path_](http://blog.weave.works/2015/11/13/weave-docker-networking-performance-fast-data-path/) to deliver network performance close to standard networking.
   
   *To take advantage of this new feature, please upgrade existing nodes to Docker 1.9.1-cs2 or re-deploy your containers to new nodes running Docker 1.9.1-cs2.*
+  
+## Changed/Updated
+
+- **Tutum Builder** has been updated to use Docker 1.9.1 and Docker Compose 1.5.2. [Learn more](https://github.com/tutumcloud/builder) 
